@@ -1,28 +1,63 @@
+@use './styles/variables' as v;
+@use './styles/mixins' as m;
+@use './styles/functions' as f;
 @import-normalize;
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Upright:wght@400;600;700&display=swap');
 
 *,
 *::before,
 *::after {
   padding: 0;
   margin: 0;
-  border: none;
+  border: 0;
   box-sizing: border-box;
 }
 
-ul {
+a {
+  text-decoration: none;
+}
+
+ul,
+ol,
+li {
   list-style: none;
 }
 
-img,
-svg {
+img {
   vertical-align: top;
-  max-width: 100%;
-  height: auto;
 }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+html,
+body {
+  height: 100%;
+  line-height: 1;
+}
+
+button {
+  cursor: pointer;
+  background-color: inherit;
+  font-weight: inherit;
+  font-size: inherit;
+  color: inherit;
+}
+
 
 body,
 html {
-  height: 100%;
+  font-family: v.$Open;
+  font-weight: 400;
+  font-size: f.rem(16);
 }
 
 #root {
@@ -33,4 +68,10 @@ html {
 
 .main {
   flex: 1 0 auto;
+}
+
+.container {
+  max-width: v.$maxWidthContainer + 30px;
+  padding: 0 f.rem(15);
+  margin-inline: auto;
 }

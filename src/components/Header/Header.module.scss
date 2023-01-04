@@ -3,7 +3,239 @@
 @use '../../styles/functions.scss' as f;
 
 .header {
-  border: 1px solid green;
+  padding-block: f.rem(32);
+  background: #0C0B08;
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 3;
 }
 
-.container {}
+.container {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  border: 1px solid;
+  flex: 1 1 33%;
+
+  a {
+    font-family: v.$Cormorant;
+    font-weight: 700;
+    font-size: f.rem(44);
+    line-height: f.ratio(44, 57.2);
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: v.$white;
+    cursor: pointer;
+  }
+}
+
+.navWrapper {
+  flex: 1 1 66%;
+  display: flex;
+  justify-content: space-between;
+
+  @include m.tablet {
+    display: none;
+    position: absolute;
+  }
+}
+
+.navWrapper.active {
+  height: 70vh;
+  width: 65vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  position: fixed;
+  background-color: rgba(170, 170, 170, 0.795);
+  top: 122px;
+  right: 0;
+  overflow: auto;
+
+  @include m.phone {
+    height: 100vh;
+    width: 100vw;
+  }
+}
+
+.nav.active {
+
+  .navList {
+    flex-direction: column;
+    row-gap: f.rem(35);
+    align-items: center;
+
+    a {
+      font-size: f.rem(28);
+    }
+  }
+
+}
+
+.navList {
+  display: flex;
+  column-gap: f.rem(32);
+  flex-wrap: wrap;
+  padding-inline: f.rem(15);
+
+  a {
+    line-height: f.ratio(16, 28);
+    text-decoration: none;
+    color: v.$white;
+    cursor: pointer;
+    letter-spacing: 0.04em;
+  }
+}
+
+.navItem {
+  position: relative;
+
+  &::after {
+    display: block;
+    position: absolute;
+    content: '';
+    height: 2px;
+    background-color: v.$white;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    transition: all 0.3s;
+  }
+
+  &:hover::after {
+    width: 100%;
+  }
+}
+
+.registration {
+  display: flex;
+  column-gap: f.rem(100);
+}
+
+.registration.active {
+  flex-direction: column;
+  row-gap: f.rem(30);
+  align-items: center;
+  margin-top: f.rem(50);
+
+
+  .table,
+  .logIn {
+    a {
+      font-size: f.rem(28);
+      line-height: f.ratio(28, 36);
+
+    }
+  }
+}
+
+.logIn {
+  position: relative;
+
+  &::after {
+    display: inline-block;
+    content: '';
+    height: 57px;
+    width: 1px;
+    background: radial-gradient(50% 50% at 50% 50%, #FFFFFF 58.85%, rgba(255, 255, 255, 0) 100%);
+    position: absolute;
+    right: -50px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  @include m.tablet {
+    max-width: 290px;
+    text-align: center;
+  }
+}
+
+.table,
+.logIn {
+
+  position: relative;
+
+  a {
+    font-weight: 600;
+    line-height: f.ratio(16, 28);
+    letter-spacing: 0.05em;
+    color: v.$white;
+
+    &::after {
+      display: block;
+      position: absolute;
+      content: '';
+      height: 2px;
+      background-color: v.$white;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      transition: all 0.3s;
+    }
+
+    &:hover::after {
+      width: 100%;
+    }
+  }
+}
+
+.burgerMenu {
+  width: 50px;
+  height: 50px;
+  display: grid;
+  place-content: center;
+  cursor: pointer;
+
+  @media screen and (min-width:769px) {
+    display: none;
+    position: absolute;
+  }
+}
+
+.menuTablet {
+  height: 1px;
+  width: 50px;
+  background-color: #fff;
+  position: relative;
+
+  &::after,
+  &::before {
+    content: '';
+    height: 1px;
+    width: 50px;
+    background-color: #fff;
+    position: absolute;
+    transition: all 0.8s;
+  }
+
+  &::after {
+    top: 12px;
+  }
+
+  &::before {
+    bottom: 12px;
+  }
+}
+
+.menuTablet.active {
+  visibility: hidden;
+
+  &::after {
+    top: 0;
+    transform: rotate(45deg);
+    visibility: visible;
+    z-index: 5;
+  }
+
+  &::before {
+    top: 0;
+    transform: rotate(-45deg);
+    visibility: visible;
+    z-index: 5;
+  }
+}
