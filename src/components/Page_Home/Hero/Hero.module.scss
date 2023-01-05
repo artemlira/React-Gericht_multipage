@@ -1,0 +1,10 @@
+@use '../../../styles/variables' as v;
+@use '../../../styles/mixins.scss' as m;
+@use '../../../styles/functions.scss' as f;
+
+.hero {
+  padding-block: f.rem(48) f.rem(152);
+  background: #0C0B08;
+}
+
+.container {}

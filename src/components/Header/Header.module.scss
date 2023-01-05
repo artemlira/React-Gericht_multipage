@@ -17,8 +17,8 @@
   align-items: center;
 }
 
+
 .logo {
-  border: 1px solid;
   flex: 1 1 33%;
 
   a {
@@ -115,6 +115,10 @@
 .registration {
   display: flex;
   column-gap: f.rem(100);
+
+  @include m.laptop {
+    column-gap: f.rem(50);
+  }
 }
 
 .registration.active {
@@ -147,6 +151,10 @@
     right: -50px;
     top: 50%;
     transform: translateY(-50%);
+
+    @include m.laptop {
+      right: -25px;
+    }
   }
 
   @include m.tablet {
