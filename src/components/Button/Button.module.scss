@@ -1,0 +1,19 @@
+@use '../../styles/variables.scss' as v;
+@use '../../styles/mixins.scss' as m;
+@use '../../styles/functions.scss' as f;
+
+.button {
+  padding: f.rem(8) f.rem(32);
+  background: v.$gold;
+  cursor: pointer;
+  font-family: v.$Cormorant;
+  font-weight: 700;
+  line-height: f.ratio(16, 28);
+  letter-spacing: 0.04em;
+
+  &:hover {
+    background: #e2c868;
+  }
+}
+
+// .container {}

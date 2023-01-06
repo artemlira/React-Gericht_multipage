@@ -75,3 +75,22 @@ html {
   padding: 0 f.rem(15);
   margin-inline: auto;
 }
+
+.swiper-wrapper{
+  transform: translateX(0) !important;
+}
+
+
+
+.swiper-pagination {
+  position: absolute;
+  left: 10px;
+  bottom: 0px;
+  color: v.$white;
+  z-index: 10;
+  font-size: f.rem(25);
+
+  span {
+    color: v.$white;
+  }
+}
