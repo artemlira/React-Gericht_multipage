@@ -2,9 +2,9 @@ import React from 'react';
 import styles from './Button.module.scss';
 
 
-export default function Button({ text }) {
+export default function Button({ text, className }) {
   return (
-    <button className={styles.button}>
+    <button className={className ? `${styles.button} ${className}` : `${styles.button}`}>
       {text}
     </button>
   );
