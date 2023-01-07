@@ -6,12 +6,13 @@
   min-height: 959px;
   padding-block: f.rem(128);
   @include m.adaptiv-value('padding-inline', 207, -50, 1);
-  background: url('../../../images/About/img1.png') center center no-repeat, url('../../../images/About/G.png') center center no-repeat, url('../../../images/About/bg1.jpg');
+  background: url('../../../images/About/img1.png') center center no-repeat, url('../../../images/About/G.png') center center no-repeat, url('../../../images/About/bg1.jpg')center/cover no-repeat;
   display: grid;
   place-content: center;
 
   @include m.tablet {
     background: url('../../../images/About/img1.png') center center/8% no-repeat, url('../../../images/About/G.png') center center no-repeat, url('../../../images/About/bg1.jpg');
+    min-height: initial;
   }
 }
 
@@ -19,6 +20,7 @@
   display: flex;
   @include m.adaptiv-value('column-gap', 254, 50, 1);
   align-items: center;
+  overflow: hidden;
 
   @include m.phone {
     flex-direction: column;
@@ -54,6 +56,11 @@
   @media screen and (max-width:600px) {
     font-size: f.rem(50);
     line-height: f.ratio(50, 78);
+  }
+
+  @include m.phone {
+    font-size: f.rem(40);
+    line-height: f.ratio(40, 68);
   }
 }
 

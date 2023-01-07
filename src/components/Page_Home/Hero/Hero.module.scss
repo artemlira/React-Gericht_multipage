@@ -5,6 +5,10 @@
 .hero {
   padding-block: f.rem(48) f.rem(152);
   background: url('../../../images/line1.png')right -8.5% no-repeat, #0C0B08;
+
+  @include m.phone {
+    padding-block: f.rem(48);
+  }
 }
 
 .container {
@@ -13,6 +17,10 @@
 
   @include m.netbook {
     flex-direction: column;
+  }
+
+  @include m.phone {
+    min-height: initial;
   }
 }
 

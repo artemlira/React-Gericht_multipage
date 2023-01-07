@@ -14,7 +14,7 @@ export default function Hero() {
     type: 'fraction',
     clickable: true,
     renderFraction: function (currentClass, totalClass) {
-      return '<span class="' + currentClass + '"></span>' + '-' + '<span class="' + totalClass + '"></span>'
+      return '0<span class="' + currentClass + '"></span>' + ' - 0' + '<span class="' + totalClass + '"></span>'
     },
   };
 
