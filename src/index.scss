@@ -78,25 +78,25 @@ html {
   margin-inline: auto;
 }
 
-.swiper-wrapper {
-  transform: translateX(0) !important;
-}
+.Hero_sliderWrapper__Pkg2a {
+  .swiper-wrapper {
+    transform: translateX(0) !important;
+  }
 
-
-
-.swiper-pagination {
-  font-family: v.$Cormorant;
-  position: absolute;
-  left: 10px;
-  bottom: 0px;
-  color: v.$white;
-  z-index: 10;
-  font-weight: 600;
-  font-size: f.rem(16);
-  letter-spacing: 0.04em;
-  line-height: f.ratio(16, 28);
-
-  span {
+  .swiper-pagination {
+    font-family: v.$Cormorant;
+    position: absolute;
+    left: 10px;
+    bottom: 0px;
     color: v.$white;
+    z-index: 10;
+    font-weight: 600;
+    font-size: f.rem(16);
+    letter-spacing: 0.04em;
+    line-height: f.ratio(16, 28);
+
+    span {
+      color: v.$white;
+    }
   }
 }

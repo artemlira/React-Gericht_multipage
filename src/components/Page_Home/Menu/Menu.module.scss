@@ -1,0 +1,49 @@
+@use '../../../styles/variables.scss' as v;
+@use '../../../styles/mixins.scss' as m;
+@use '../../../styles/functions.scss' as f;
+
+.menu {
+  max-height: 932px;
+  width: 100%;
+  background: #0C0B08;
+
+  @include m.phone {
+    max-height: 632px;
+  }
+}
+
+.container {
+  max-height: 100%;
+  position: relative;
+}
+
+.bgIcon {
+  position: absolute;
+  width: 146px;
+  height: 146px;
+  background: url('../../../images/icon.png') center center/cover no-repeat;
+  left: 26px;
+  top: -26px;
+  z-index: 10;
+
+
+  @include m.phone {
+    width: 106px;
+    height: 106px;
+  }
+}
+
+.wrapperImg {
+  height: 932px;
+
+  @include m.phone {
+    height: 632px;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+}

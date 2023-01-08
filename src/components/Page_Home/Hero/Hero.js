@@ -32,33 +32,31 @@ export default function Hero() {
             <Button text="Explore Menu" />
           </div>
           <div className={styles.sliderWrapper}>
-            <Swiper className={styles.slider}
+            <Swiper
+              className={styles.slider}
               direction={"vertical"}
               centeredSlides={true}
               modules={[Pagination, EffectCreative, Autoplay, Navigation]}
               effect={"creative"}
               creativeEffect={{
-                prev: {
-                  shadow: false,
-                  translate: [0, 0, 0],
-                },
-                next: {
-                  translate: [0, "-100%", 0],
-                },
+                prev: { shadow: false, translate: [0, 0, 0], },
+                next: { translate: [0, "-100%", 0], },
               }}
               spaceBetween={50} // отступ между слайдерами
               slidesPerView={1}  //кол-во слайдеров
               pagination={pagination}
               loop={true}//бесконечность
-              autoplay={{
-                delay: 2000,
-                stopOnLastSlide: false,
-                disableOnInteraction: false
-              }}
+              autoplay={{ delay: 2000, stopOnLastSlide: false, disableOnInteraction: false }}
               speed={1500}>
-              <SwiperSlide className={styles.slide}><Image src={require('../../../images/Hero/slide1.jpg')} webp={require('../../../images/Hero/slide1.webp')} alt="slide1" /></SwiperSlide>
-              <SwiperSlide className={styles.slide}><Image src={require('../../../images/Hero/slide2.jpg')} webp={require('../../../images/Hero/slide2.webp')} alt="slide2" /></SwiperSlide>
-              <SwiperSlide className={styles.slide}><Image src={require('../../../images/Hero/slide3.jpg')} webp={require('../../../images/Hero/slide3.webp')} alt="slide3" /></SwiperSlide>
+              <SwiperSlide className={styles.slide}>
+                <Image src={require('../../../images/Hero/slide1.jpg')} webp={require('../../../images/Hero/slide1.webp')} alt="slide1" />
+              </SwiperSlide>
+              <SwiperSlide className={styles.slide}>
+                <Image src={require('../../../images/Hero/slide2.jpg')} webp={require('../../../images/Hero/slide2.webp')} alt="slide2" />
+              </SwiperSlide>
+              <SwiperSlide className={styles.slide}>
+                <Image src={require('../../../images/Hero/slide3.jpg')} webp={require('../../../images/Hero/slide3.webp')} alt="slide3" />
+              </SwiperSlide>
             </Swiper>
             <span className={styles.scroll}>Scroll</span>
           </div>

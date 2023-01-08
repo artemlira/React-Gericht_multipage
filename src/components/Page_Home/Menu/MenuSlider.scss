@@ -1,0 +1,45 @@
+@use '../../../styles/variables.scss' as v;
+@use '../../../styles/mixins.scss' as m;
+@use '../../../styles/functions.scss' as f;
+
+.Menu_menu__4WBFF {
+  .swiper {
+    height: 100%;
+  }
+
+  .swiper-pagination {
+    position: absolute;
+    left: 26px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    row-gap: 64px;
+    z-index: 10;
+
+    @include m.phone {
+      row-gap: 32px;
+    }
+  }
+
+  .swiper-pagination-bullet {
+    display: flex;
+    font-family: v.$Cormorant;
+    font-weight: 600;
+    font-size: f.rem(64);
+    line-height: f.ratio(64, 83.2);
+    letter-spacing: 0.03em;
+    color: v.$white;
+
+    @include m.phone {
+      font-size: f.rem(40);
+      line-height: f.ratio(40, 60);
+    }
+  }
+
+  .swiper-pagination-bullet-active {
+    text-decoration: underline;
+    text-underline-offset: 10px;
+  }
+
+}
