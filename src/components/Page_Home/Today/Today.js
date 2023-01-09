@@ -51,7 +51,7 @@ export default function Today() {
           <motion.div
             initial='hidden'
             whileInView='visible'
-            viewport={{ amount: 0.2 }}
+            viewport={{ amount: 0.4, once: true }}
             className={styles.contant}>
             <motion.div
               variants={animatedLeft}
