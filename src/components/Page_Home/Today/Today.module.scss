@@ -1,0 +1,184 @@
+@use '../../../styles/variables.scss' as v;
+@use '../../../styles/mixins.scss' as m;
+@use '../../../styles/functions.scss' as f;
+
+.today {
+  background: url('../../../images/line1.png')right -2600px no-repeat, #0C0B08;
+  padding-block: f.rem(152);
+  @include m.adaptiv-value('padding-inline', 190, -190, 1);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  text-align: center;
+
+  h2 {
+    font-family: v.$Cormorant;
+    font-weight: 600;
+    font-size: f.rem(64);
+    line-height: f.ratio(64, 83.2);
+    color: v.$gold;
+  }
+
+  &:not(:last-child) {
+    margin-bottom: f.rem(64);
+  }
+}
+
+.logoText {
+  font-family: v.$Cormorant;
+  font-weight: 700;
+  font-size: f.rem(23);
+  line-height: f.ratio(23, 29.9);
+  color: v.$white;
+
+  &:not(:last-child) {
+    margin-bottom: f.rem(8);
+  }
+}
+
+.logoImg {
+  width: 40px;
+  height: 10px;
+  margin-inline: auto;
+
+  &:not(:last-child) {
+    margin-bottom: f.rem(8);
+  }
+
+  img {
+    max-width: 100;
+    object-fit: contain;
+  }
+}
+
+.contant {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: f.rem(32);
+
+  &:not(:last-child) {
+    margin-bottom: f.rem(65);
+  }
+
+  @include m.netbook {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 'wine cocktails' 'image image';
+  }
+
+  @include m.tablet {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: 'wine wine' 'image image' 'cocktails cocktails';
+  }
+}
+
+.wine,
+.cocktails {
+  padding-block: f.rem(32);
+}
+
+.wine {
+  @include m.netbook {
+    grid-area: wine;
+  }
+}
+
+.cocktails {
+  @include m.netbook {
+    grid-area: cocktails;
+  }
+}
+
+.wineTitle,
+.cocktailsTitle {
+  text-align: center;
+  font-family: v.$Cormorant;
+  font-weight: 600;
+  font-size: f.rem(45);
+  line-height: f.ratio(45, 58.5);
+  letter-spacing: 0.04em;
+  color: v.$white;
+
+  &:not(:last-child) {
+    margin-bottom: f.rem(48);
+  }
+}
+
+.image {
+  background: url('../../../images/Today/bg1.jpg')center center/cover no-repeat;
+
+  @include m.netbook {
+    grid-area: image;
+    background: url('../../../images/Today/bg1.jpg')center/auto no-repeat;
+  }
+}
+
+.wineList,
+.cocktailsList {
+  display: flex;
+  flex-direction: column;
+  row-gap: f.rem(40);
+
+  @include m.laptop {
+    row-gap: f.rem(20);
+  }
+}
+
+.ItemTitle {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+
+  &:not(:last-child) {
+    margin-bottom: f.rem(8);
+  }
+
+  &::after {
+    height: 1px;
+    @include m.adaptiv-value('width', 119, 0, 1);
+    content: '';
+    background-color: v.$white;
+    position: absolute;
+    top: 50%;
+    right: 69px;
+    transform: translateY(-50%);
+
+    @include m.tablet {
+      width: 45px;
+    }
+  }
+}
+
+.name,
+.price {
+  font-family: v.$Cormorant;
+  font-weight: 700;
+  font-size: f.rem(23);
+  line-height: f.ratio(23, 29.9);
+  color: v.$gold;
+  letter-spacing: 0.04em;
+  text-transform: capitalize;
+
+  @include m.laptop {
+    font-size: f.rem(20);
+    line-height: f.ratio(20, 26.9);
+  }
+}
+
+.price {
+  color: v.$white;
+}
+
+.composition {
+  line-height: f.ratio(16, 28);
+  color: v.$grey;
+  letter-spacing: 0.04em;
+}

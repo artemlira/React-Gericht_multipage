@@ -28,7 +28,7 @@ export default function About() {
         <motion.div
           initial='hidden'
           whileInView='visible'
-          viewport={{ amount: 0.1, once: true }}
+          viewport={{ amount: 0.2, once: true }}
           className={styles.container}>
           <motion.div
             variants={animatedLeft}

@@ -4,7 +4,7 @@
 
 .menu {
   max-height: 932px;
-  width: 100%;
+  justify-content: flex-start;
   background: #0C0B08;
 
   @include m.phone {
@@ -35,13 +35,14 @@
 
 .wrapperImg {
   height: 932px;
+  // width: 100vw;
 
   @include m.phone {
     height: 632px;
   }
 
   img {
-    width: 100%;
+    width: 99%;
     height: 100%;
     object-fit: cover;
     object-position: center;

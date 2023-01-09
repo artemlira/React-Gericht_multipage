@@ -35,6 +35,10 @@
   right: -126px;
   top: -176px;
 
+  @media screen and (max-width:1080px) {
+    right: -86px;
+  }
+
   @include m.tablet {
     right: -45px;
   }
