@@ -105,24 +105,29 @@
   position: relative;
   padding-bottom: f.rem(92) !important;
 
+  @include m.tablet {
+    width: 80vw;
+    max-height: 100vw;
+  }
+
   &::after,
   &::before {
     content: '';
-    width: 435px;
-    height: 435px;
+    width: 68%;
+    height: 55%;
     background: v.$gold;
     position: absolute;
     z-index: 0;
   }
 
   &::after {
-    left: 184px;
+    right: 0;
     top: 0;
     z-index: -1;
   }
 
   &::before {
-    right: 184px;
+    left: 0;
     bottom: 90px;
   }
 }
@@ -132,10 +137,6 @@
   padding: f.rem(24);
   position: relative;
   transform: translateX(10px);
-
-  @media screen and (max-width:680px) {
-    padding-inline: f.rem(0);
-  }
 
   img {
     height: 100%;
@@ -153,10 +154,6 @@
 
   @include m.netbook {
     place-content: center;
-  }
-
-  @include m.phone {
-    display: none;
   }
 }
 

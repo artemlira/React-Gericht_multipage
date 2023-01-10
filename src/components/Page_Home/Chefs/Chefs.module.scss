@@ -2,6 +2,151 @@
 @use '../../../styles/mixins.scss' as m;
 @use '../../../styles/functions.scss' as f;
 
-.chefs {}
+.chefs {
+  background: url('../../../images/Chefs/BG.jpg')center center/cover no-repeat;
+}
 
-.container {}
+.container {
+  display: flex;
+  padding-block: 128px;
+  @include m.adaptiv-value('padding-inline', 175, 0, 1);
+  overflow: hidden;
+
+  @include m.laptop {
+    padding-inline: 0px;
+  }
+
+  @include m.netbook {
+    flex-direction: column-reverse;
+  }
+
+  @include m.phone {
+    padding-block: 28px;
+  }
+
+}
+
+.image {
+  flex: 0 1 50%;
+  max-height: 789px;
+  position: relative;
+  padding: 24px;
+  overflow: hidden;
+
+  @include m.netbook {
+    min-width: initial;
+  }
+
+  &::after,
+  &::before {
+    width: 68%;
+    height: 68%;
+    content: '';
+    background-color: v.$gold;
+    position: absolute;
+  }
+
+  &::after {
+    bottom: 0;
+    left: 0;
+  }
+
+  &::before {
+    top: 0;
+    right: 0;
+  }
+}
+
+.chefsSlider {
+  max-height: 100%;
+}
+
+.contant {
+  flex: 0 1 50%;
+  padding-block: f.rem(83);
+  @include m.adaptiv-value('padding-left', 96, 0, 1);
+  display: flex;
+  flex-direction: column;
+  @include m.adaptiv-value('row-gap', 64, 0, 1);
+}
+
+.contantTitle {
+
+  h2 {
+    font-family: v.$Cormorant;
+    font-weight: 600;
+    font-size: f.rem(64);
+    line-height: f.ratio(64, 83.2);
+    color: v.$gold;
+    letter-spacing: 0.04em;
+  }
+}
+
+.logoText {
+  font-family: v.$Cormorant;
+  font-weight: 700;
+  font-size: f.rem(23);
+  line-height: f.ratio(23, 29.9);
+  color: v.$white;
+  letter-spacing: 0.04em;
+
+  &:not(:last-child) {
+    margin-bottom: f.rem(8);
+  }
+}
+
+
+.logoImg {
+  width: 40px;
+  height: 10px;
+
+  &:not(:last-child) {
+    margin-bottom: f.rem(8);
+  }
+
+  img {
+    max-width: 100;
+    object-fit: contain;
+  }
+}
+
+
+.textTitle,
+.text {
+  font-style: italic;
+  line-height: f.ratio(16, 28);
+  color: v.$grey;
+  letter-spacing: 0.04em;
+}
+
+.textTitle {
+  display: flex;
+  align-items: flex-end;
+  column-gap: f.rem(10);
+}
+
+.name {
+  font-family: v.$Cormorant;
+  font-weight: 400;
+  font-size: f.rem(32);
+  line-height: f.ratio(32, 41.6);
+  color: v.$gold;
+
+  &:not(:last-child) {
+    margin-bottom: f.rem(8);
+  }
+}
+
+.position {
+  line-height: f.ratio(16, 28);
+}
+
+.signature {
+  width: 240px;
+  height: 83px;
+
+  img {
+    width: 100%;
+    object-fit: cover;
+  }
+}

@@ -60,6 +60,8 @@ html {
   font-family: v.$Open;
   font-weight: 400;
   font-size: f.rem(16);
+  letter-spacing: 0.04em;
+  color: v.$grey;
 }
 
 #root {
