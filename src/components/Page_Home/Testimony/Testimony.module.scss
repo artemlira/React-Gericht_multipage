@@ -1,0 +1,140 @@
+@use '../../../styles/variables.scss' as v;
+@use '../../../styles/mixins.scss' as m;
+@use '../../../styles/functions.scss' as f;
+
+.testimony {
+  background: url('../../../images/line1.png')right -4900px no-repeat, #0C0B08;
+  padding-block: f.rem(152);
+  @include m.adaptiv-value('padding-inline', 190, -190, 1);
+}
+
+.container {
+  position: relative;
+}
+
+.bgIcon {
+  position: absolute;
+  width: 146px;
+  height: 146px;
+  background: url('../../../images/icon.png') center center/cover no-repeat;
+  right: 0;
+  top: -200px;
+  z-index: 10;
+
+  @include m.phone {
+    width: 106px;
+    height: 106px;
+  }
+}
+
+.title {
+  text-align: center;
+
+  h2 {
+    font-family: v.$Cormorant;
+    font-weight: 600;
+    font-size: f.rem(64);
+    line-height: f.ratio(64, 83.2);
+    color: v.$gold;
+  }
+
+  &:not(:last-child) {
+    margin-bottom: f.rem(64);
+  }
+}
+
+.logoText {
+  font-family: v.$Cormorant;
+  font-weight: 700;
+  font-size: f.rem(23);
+  line-height: f.ratio(23, 29.9);
+  color: v.$white;
+
+  &:not(:last-child) {
+    margin-bottom: f.rem(8);
+  }
+}
+
+.logoImg {
+  width: 40px;
+  height: 10px;
+  margin-inline: auto;
+
+  &:not(:last-child) {
+    margin-bottom: f.rem(8);
+  }
+
+  img {
+    max-width: 100;
+    object-fit: contain;
+  }
+}
+
+.contantList {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  column-gap: f.rem(32);
+  row-gap: f.rem(64);
+
+  @include m.laptop {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    column-gap: f.rem(32);
+    row-gap: f.rem(32);
+  }
+}
+
+.contantItem {
+  display: flex;
+
+  @media screen and (max-width:675px) {
+    flex-direction: column-reverse;
+  }
+}
+
+.itemPhoto {
+  border: 5px solid green;
+  flex: 0 1 212px;
+  padding: f.rem(0) f.rem(16) f.rem(18) f.rem(0);
+
+  @media screen and (max-width:675px) {
+    width: 212px;
+    margin-inline: auto;
+    padding: f.rem(0);
+  }
+}
+
+.itemContant {
+  flex: 0 1 77%;
+  padding: f.rem(18) f.rem(0) f.rem(18) f.rem(16);
+
+  @media screen and (max-width:675px) {
+    flex: 1 1 auto;
+    padding: f.rem(0);
+  }
+}
+
+.itemText {
+  font-style: italic;
+  line-height: f.ratio(16, 28);
+
+  &:not(:last-child) {
+    margin-bottom: f.rem(16);
+  }
+}
+
+.itemAuthor {
+  font-weight: 400;
+  font-size: f.rem(32);
+  line-height: f.ratio(32, 41.6);
+
+  &:not(:last-child) {
+    margin-bottom: f.rem(4);
+  }
+}
+
+.itemPosition {
+  line-height: f.ratio(16, 28);
+  color: v.$f5e;
+}
