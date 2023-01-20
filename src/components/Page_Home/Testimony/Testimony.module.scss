@@ -90,18 +90,43 @@
 
   @media screen and (max-width:675px) {
     flex-direction: column-reverse;
+
+    &:not(:last-child) {
+      margin-bottom: f.rem(64);
+    }
   }
 }
 
 .itemPhoto {
-  border: 5px solid green;
   flex: 0 1 212px;
   padding: f.rem(0) f.rem(16) f.rem(18) f.rem(0);
+  position: relative;
 
   @media screen and (max-width:675px) {
     width: 212px;
     margin-inline: auto;
     padding: f.rem(0);
+  }
+
+  &::after {
+    width: 47px;
+    height: 40px;
+    content: '';
+    background: url('../../../images/Chefs/“.png')center/cover no-repeat;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+
+    @media screen and (max-width:675px) {
+      bottom: -20px;
+      right: -28px;
+    }
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 }
 
@@ -132,9 +157,17 @@
   &:not(:last-child) {
     margin-bottom: f.rem(4);
   }
+
+  @media screen and (max-width:675px) {
+    text-align: center;
+  }
 }
 
 .itemPosition {
   line-height: f.ratio(16, 28);
   color: v.$f5e;
+
+  @media screen and (max-width:675px) {
+    text-align: center;
+  }
 }
