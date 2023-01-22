@@ -1,0 +1,61 @@
+@use '../../../styles/variables.scss' as v;
+@use '../../../styles/mixins.scss' as m;
+@use '../../../styles/functions.scss' as f;
+
+.video {
+  height: 763px;
+  background: url('../../../images/video/bg.jpg')center center/cover no-repeat, #0c0c0c6b;
+  background-blend-mode: overlay;
+  @include m.adaptiv-value('padding-inline', 190, -190, 1);
+}
+
+.container {
+  height: 100%;
+  position: relative;
+  display: grid;
+  place-items: center;
+
+}
+
+.bgIcon {
+  position: absolute;
+  width: 146px;
+  height: 146px;
+  background: url('../../../images/icon.png') center center/cover no-repeat;
+  left: -47px;
+  top: 147px;
+  z-index: 10;
+
+  @include m.laptop {
+    left: 0px;
+    top: 147px;
+  }
+
+  @include m.phone {
+    width: 106px;
+    height: 106px;
+  }
+}
+
+.play {
+  width: 120px;
+  height: 120px;
+
+  @include m.phone {
+    width: 80px;
+    height: 80px;
+  }
+
+  svg {
+    width: 100%;
+    height: 100%;
+    transition: all 0.5s ease-out;
+  }
+
+  &:hover {
+    svg {
+      transform: scale(1.1);
+      fill: v.$gold;
+    }
+  }
+}

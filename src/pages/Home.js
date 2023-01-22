@@ -6,6 +6,7 @@ import Menu from '../components/Page_Home/Menu/Menu';
 import Today from '../components/Page_Home/Today/Today';
 import Chefs from './../components/Page_Home/Chefs/Chefs';
 import Testimony from './../components/Page_Home/Testimony/Testimony';
+import Video from '../components/Page_Home/Video/Video';
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
       <Today />
       <Chefs />
       <Testimony />
+      <Video />
     </article>
   )
 }
