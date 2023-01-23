@@ -1,0 +1,171 @@
+@use '../../../styles/variables.scss' as v;
+@use '../../../styles/mixins.scss' as m;
+@use '../../../styles/functions.scss' as f;
+
+.chefsWord {
+  background: url('../../../images/ChefsWord/BG.jpg')center/cover no-repeat;
+
+}
+
+.container {
+  margin-block: f.rem(128);
+  @include m.adaptiv-value('margin-inline', 190, -190, 1);
+  display: flex;
+  flex-direction: row-reverse;
+  column-gap: f.rem(111);
+  align-items: center;
+  overflow: hidden;
+
+  @include m.laptop {
+    flex-direction: column-reverse;
+    align-items: center;
+    margin-inline: 0px;
+  }
+}
+
+.image {
+  height: 691px;
+  flex: 0 0 555px;
+  padding-left: f.rem(72);
+  position: relative;
+
+  @include m.laptop {
+    max-height: 691px;
+    max-width: 555px;
+    height: 80vw;
+    width: 80vw;
+    flex: 0 0 auto;
+  }
+
+  &::before {
+    width: 360px;
+    height: 379px;
+    content: '';
+    background: url('../../../images/ChefsWord/G.png') center/cover no-repeat;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 5;
+
+    @include m.tablet {
+      width: 50vw;
+      height: 55vw;
+    }
+  }
+
+}
+
+.chefsWordSlider {
+  height: 100%;
+  max-width: 483px;
+}
+
+.contant {
+  flex: 0 1 64%;
+  margin-block: f.rem(119);
+}
+
+.title {
+  @include m.laptop {
+    text-align: center;
+  }
+
+  h2 {
+    font-family: v.$Cormorant;
+    font-weight: 600;
+    font-size: f.rem(64);
+    line-height: f.ratio(64, 83.2);
+    color: v.$gold;
+  }
+
+  &:not(:last-child) {
+    margin-bottom: f.rem(64);
+  }
+}
+
+.logoText {
+  font-weight: 700;
+  font-family: v.$Cormorant;
+  font-size: f.rem(23);
+  line-height: f.ratio(23, 29.9);
+  color: v.$white;
+
+  &:not(:last-child) {
+    margin-bottom: f.rem(8);
+  }
+}
+
+.logoImg {
+  width: 40px;
+  height: 10px;
+
+  @include m.laptop {
+    margin-inline: auto;
+  }
+
+  &:not(:last-child) {
+    margin-bottom: f.rem(8);
+  }
+
+  img {
+    max-width: 100;
+    object-fit: contain;
+  }
+}
+
+.awardsList {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  column-gap: f.rem(32);
+  row-gap: f.rem(64);
+
+  @include m.netbook {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    column-gap: f.rem(32);
+    row-gap: f.rem(32);
+  }
+}
+
+.awardItem {
+  display: flex;
+  column-gap: f.rem(32);
+  align-items: center;
+}
+
+.itemContent {
+  padding-right: f.rem(10);
+}
+
+.itemImg {
+  flex: 0 0 79px;
+  height: 79px;
+
+  @include m.phone {
+    flex: 0 0 59px;
+    height: 59px;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.itemTitle {
+  font-weight: 700;
+  font-family: v.$Cormorant;
+  font-size: f.rem(23);
+  line-height: f.ratio(23, 29.9);
+  color: v.$gold;
+
+  &:not(:last-child) {
+    margin-bottom: f.rem(8);
+  }
+}
+
+.itemText {
+  line-height: f.ratio(16, 28);
+}
