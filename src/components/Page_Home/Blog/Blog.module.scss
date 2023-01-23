@@ -3,7 +3,7 @@
 @use '../../../styles/functions.scss' as f;
 
 .blog {
-  background: #0C0B08;
+  background: url('../../../images/line1.png')right -7764px no-repeat, url('../../../images/line2.png')left -7764px no-repeat, #0C0B08;
   position: relative;
 }
 
