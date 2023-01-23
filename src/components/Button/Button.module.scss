@@ -10,9 +10,11 @@
   font-weight: 700;
   line-height: f.ratio(16, 28);
   letter-spacing: 0.04em;
+  color: v.$black;
+  transition: background-color, 0.5s;
 
   &:hover {
-    background: #e2c868;
+    background: #e2c768b4;
   }
 }
 

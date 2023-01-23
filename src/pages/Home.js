@@ -8,6 +8,7 @@ import Chefs from './../components/Page_Home/Chefs/Chefs';
 import Testimony from './../components/Page_Home/Testimony/Testimony';
 import Video from '../components/Page_Home/Video/Video';
 import ChefsWord from '../components/Page_Home/ChefsWord/ChefsWord';
+import Blog from './../components/Page_Home/Blog/Blog';
 
 export default function Home() {
   return (
@@ -20,7 +21,8 @@ export default function Home() {
       <Chefs />
       <Testimony />
       <Video />
-      <ChefsWord/>
+      <ChefsWord />
+      <Blog />
     </article>
   )
 }
