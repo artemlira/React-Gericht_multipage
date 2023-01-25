@@ -1,9 +1,9 @@
 import React, { forwardRef } from 'react';
 import styles from './Blog.module.scss';
-import logo from '../../../images/Hero/iconLogo.svg';
 import Button from './../../Button/Button';
 import { motion } from 'framer-motion';
 import { isWebpSupported } from 'react-image-webp/dist/utils';
+import Title from '../../Title/Title';
 
 const animation = {
   hidden: {
@@ -54,11 +54,7 @@ export default function Blog() {
       <div className="container">
         <div className={styles.container}>
           <div className={styles.bgIcon}></div>
-          <div className={styles.title}>
-            <p className={styles.logoText}>Blogs</p>
-            <div className={styles.logoImg}><img src={logo} alt="logo" /></div>
-            <h2>Gerícht updates</h2>
-          </div>
+          <Title text="Blogs" title="Gerícht updates" />
           <div className={styles.content}>
             <motion.ul
               initial='hidden'

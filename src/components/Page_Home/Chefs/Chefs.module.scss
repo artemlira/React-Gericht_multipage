@@ -70,46 +70,13 @@
   @include m.adaptiv-value('row-gap', 64, 0, 1);
 }
 
-.contantTitle {
+.chefsTitle {
+  text-align: start;
 
-  h2 {
-    font-family: v.$Cormorant;
-    font-weight: 600;
-    font-size: f.rem(64);
-    line-height: f.ratio(64, 83.2);
-    color: v.$gold;
-    letter-spacing: 0.04em;
+  div {
+    margin-inline: 0px;
   }
 }
-
-.logoText {
-  font-family: v.$Cormorant;
-  font-weight: 700;
-  font-size: f.rem(23);
-  line-height: f.ratio(23, 29.9);
-  color: v.$white;
-  letter-spacing: 0.04em;
-
-  &:not(:last-child) {
-    margin-bottom: f.rem(8);
-  }
-}
-
-
-.logoImg {
-  width: 40px;
-  height: 10px;
-
-  &:not(:last-child) {
-    margin-bottom: f.rem(8);
-  }
-
-  img {
-    max-width: 100;
-    object-fit: contain;
-  }
-}
-
 
 .textTitle,
 .text {

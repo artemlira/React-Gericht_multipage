@@ -9,6 +9,7 @@ import Testimony from './../components/Page_Home/Testimony/Testimony';
 import Video from '../components/Page_Home/Video/Video';
 import ChefsWord from '../components/Page_Home/ChefsWord/ChefsWord';
 import Blog from './../components/Page_Home/Blog/Blog';
+import PhotoGallery from './../components/Page_Home/PhotoGallery/PhotoGallery';
 
 export default function Home() {
   return (
@@ -23,6 +24,7 @@ export default function Home() {
       <Video />
       <ChefsWord />
       <Blog />
+      <PhotoGallery />
     </article>
   )
 }

@@ -1,12 +1,12 @@
 import React from 'react';
 import styles from './Chefs.module.scss';
-import logo from '../../../images/Hero/iconLogo.svg';
 import signature from '../../../images/Chefs/Kevin Luo.svg';
 import quotes from '../../../images/Chefs/“.png';
 import Image from 'react-image-webp';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, EffectCreative } from "swiper";
 import './ChefsSlider.scss';
+import Title from './../../Title/Title';
 
 
 export default function Chefs() {
@@ -34,11 +34,7 @@ export default function Chefs() {
             </Swiper>
           </div>
           <div className={styles.contant}>
-            <div className={styles.contantTitle}>
-              <p className={styles.logoText}>Chef’s Word</p>
-              <div className={styles.logoImg}><img src={logo} alt="logo" /></div>
-              <h2>What we believe in</h2>
-            </div>
+            <Title className={styles.chefsTitle} text="Chef’s Word" title="What we believe in" />
             <div className={styles.contantText}>
               <div className={styles.textTitle}>
                 <img src={quotes} alt="quotes" />

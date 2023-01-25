@@ -1,8 +1,8 @@
 import React, { forwardRef } from 'react';
 import { motion } from 'framer-motion';
 import styles from './Testimony.module.scss';
-import logo from '../../../images/Hero/iconLogo.svg';
 import { isWebpSupported } from 'react-image-webp/dist/utils';
+import Title from './../../Title/Title';
 
 const animation = {
   hidden: {
@@ -53,11 +53,7 @@ export default function Testimony() {
       <div className="container">
         <div className={styles.container}>
           <div className={styles.bgIcon}></div>
-          <div className={styles.title}>
-            <p className={styles.logoText}>Testimony</p>
-            <div className={styles.logoImg}><img src={logo} alt="logo" /></div>
-            <h2>Happy customers</h2>
-          </div>
+          <Title text="Testimony" title="Happy customers" />
           <div className={styles.contant}>
             <motion.ul
               initial='hidden'

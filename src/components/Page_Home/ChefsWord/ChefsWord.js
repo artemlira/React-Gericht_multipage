@@ -1,11 +1,11 @@
 import React from 'react';
 import styles from './ChefsWord.module.scss';
-import logo from '../../../images/Hero/iconLogo.svg';
 import { motion } from 'framer-motion';
 import Image from 'react-image-webp';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, EffectCreative } from "swiper";
 import './ChefsWordSlider.scss'
+import Title from './../../Title/Title';
 
 const animationLeft = {
   hidden: {
@@ -82,11 +82,7 @@ export default function ChefsWord() {
             </Swiper>
           </motion.div>
           <motion.div variants={animationLeft} className={styles.contant}>
-            <div className={styles.title}>
-              <p className={styles.logoText}>Awards & recognition</p>
-              <div className={styles.logoImg}><img src={logo} alt="logo" /></div>
-              <h2>Our Laurels</h2>
-            </div>
+            <Title className={styles.ChefsWordTitle} text="Awards & recognition" title="Our Laurels" />
             <div className={styles.awards}>
               <ul className={styles.awardsList}>
                 {awards.map(el =>

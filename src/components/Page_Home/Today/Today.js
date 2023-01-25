@@ -1,8 +1,8 @@
 import React from 'react';
 import styles from './Today.module.scss';
 import Button from './../../Button/Button';
-import logo from '../../../images/Hero/iconLogo.svg';
 import { motion } from 'framer-motion';
+import Title from './../../Title/Title';
 
 
 
@@ -43,11 +43,7 @@ export default function Today() {
     <section className={styles.today}>
       <div className="container">
         <div className={styles.container}>
-          <div className={styles.title}>
-            <p className={styles.logoText}>Menu that fits you palatte</p>
-            <div className={styles.logoImg}><img src={logo} alt="logo" /></div>
-            <h2>Today’s Special</h2>
-          </div>
+          <Title text="Menu that fits you palatte" title="Today’s Special" />
           <motion.div
             initial='hidden'
             whileInView='visible'

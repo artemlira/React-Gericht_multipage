@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './Reservation.module.scss';
 import Button from './../../Button/Button';
-import logo from '../../../images/Hero/iconLogo.svg';
+import Title from './../../Title/Title';
 
 
 export default function Reservation() {
@@ -10,11 +10,7 @@ export default function Reservation() {
       <div className="container">
         <div className={styles.container}>
           <div className={styles.bgIcon}></div>
-          <div className={styles.title}>
-            <p className={styles.logoText}>Reservations</p>
-            <div className={styles.logoImg}><img src={logo} alt="logo" /></div>
-            <h2>Book A Table</h2>
-          </div>
+          <Title text="Reservations" title="Book A Table"/>
           <div className={styles.dialogBox}>
             <form className={styles.dialogForm} action="/">
               <input className={styles.text} type="text" placeholder='1 person' />

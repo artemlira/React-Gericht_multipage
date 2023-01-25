@@ -51,57 +51,6 @@
   }
 }
 
-.title {
-  max-width: 360px;
-  margin-inline: auto;
-  text-align: center;
-
-  &:not(:last-child) {
-    margin-bottom: f.rem(64);
-  }
-
-  h2 {
-    font-weight: 600;
-    font-size: f.rem(64);
-    line-height: f.ratio(64, 83.2);
-    letter-spacing: 0.03em;
-
-    @include m.phone {
-      font-size: f.rem(40);
-      line-height: f.ratio(40, 63.2);
-    }
-  }
-}
-
-.logoText {
-  font-family: v.$Cormorant;
-  font-weight: 700;
-  color: v.$white;
-  font-size: f.rem(23);
-  line-height: f.ratio(23, 29.9);
-  letter-spacing: 0.04em;
-  text-transform: capitalize;
-
-  &:not(:last-child) {
-    margin-bottom: f.rem(8);
-  }
-}
-
-.logoImg {
-  width: 40px;
-  height: 10px;
-  margin-inline: auto;
-
-  &:not(:last-child) {
-    margin-bottom: f.rem(8);
-  }
-
-  img {
-    max-width: 100;
-    object-fit: contain;
-  }
-}
-
 .dialogBox {
   width: 100%;
 
