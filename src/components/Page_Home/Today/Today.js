@@ -44,16 +44,18 @@ export default function Today() {
       <div className="container">
         <div className={styles.container}>
           <Title text="Menu that fits you palatte" title="Today’s Special" />
-          <motion.div
-            initial='hidden'
-            whileInView='visible'
-            viewport={{ amount: 0.4, once: true }}
-            className={styles.contant}>
+          <div className={styles.contant}>
             <motion.div
-              variants={animatedLeft}
+              initial='hidden'
+              whileInView='visible'
+              viewport={{ amount: 0.4, once: true }}
               className={styles.wine}>
-              <h4 className={styles.wineTitle}>Wine & Beer</h4>
-              <ul className={styles.wineList}>
+              <motion.h4
+                variants={animatedLeft}
+                className={styles.wineTitle}>Wine & Beer</motion.h4>
+              <motion.ul
+                variants={animatedLeft}
+                className={styles.wineList}>
                 {wine.map(i =>
                   <ItemMenu
                     key={Math.random() * 10}
@@ -62,14 +64,20 @@ export default function Today() {
                     price={i.price}
                     styles={styles}
                   />)}
-              </ul>
+              </motion.ul>
             </motion.div>
             <div className={styles.image}></div>
             <motion.div
-              variants={animatedRight}
+              initial='hidden'
+              whileInView='visible'
+              viewport={{ amount: 0.4, once: true }}
               className={styles.cocktails}>
-              <h4 className={styles.cocktailsTitle}>Cocktails</h4>
-              <ul className={styles.cocktailsList}>
+              <motion.h4
+                variants={animatedRight}
+                className={styles.cocktailsTitle}>Cocktails</motion.h4>
+              <motion.ul
+                variants={animatedRight}
+                className={styles.cocktailsList}>
                 {cocktails.map(i =>
                   <ItemMenu
                     key={Math.random() * 10}
@@ -78,9 +86,9 @@ export default function Today() {
                     price={i.price}
                     styles={styles}
                   />)}
-              </ul>
+              </motion.ul>
             </motion.div>
-          </motion.div>
+          </div>
           <div className={styles.button}>
             <Button text="View More" />
           </div>
