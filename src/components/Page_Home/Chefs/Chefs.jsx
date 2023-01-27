@@ -6,7 +6,7 @@ import Image from 'react-image-webp';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, EffectCreative } from "swiper";
 import './ChefsSlider.scss';
-import Title from './../../Title/Title';
+import Title from '../../Title/Title';
 
 
 export default function Chefs() {

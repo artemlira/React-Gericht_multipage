@@ -4,6 +4,30 @@
 
 .footer {
   border: 1px solid red;
+  background: url('../../images/line1.png') right -9957px no-repeat, url('../../images/line2.png') left -9957px no-repeat, url('../../images/Footer/BG.jpg') center 334px / cover no-repeat, #0C0B08;
+  
 }
 
-.container {}
+.bgIcon {
+  position: absolute;
+  width: 146px;
+  height: 146px;
+  background: url('../../images/icon.png') center / cover no-repeat;
+  top: -60px;
+  left: -14px;
+  z-index: 10;
+
+  @include m.laptop {
+    bottom: 20px;
+    right: 20px;
+  }
+
+  @include m.phone {
+    width: 106px;
+    height: 106px;
+  }
+}
+
+.container {
+  position: relative;
+}

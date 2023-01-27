@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './PhotoGallery.module.scss';
 import Title from '../../Title/Title';
-import Button from './../../Button/Button';
+import Button from '../../Button/Button';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from "swiper";
 import Image from 'react-image-webp';

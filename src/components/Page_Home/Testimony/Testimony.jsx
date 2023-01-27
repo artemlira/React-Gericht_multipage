@@ -2,7 +2,7 @@ import React, { forwardRef } from 'react';
 import { motion } from 'framer-motion';
 import styles from './Testimony.module.scss';
 import { isWebpSupported } from 'react-image-webp/dist/utils';
-import Title from './../../Title/Title';
+import Title from '../../Title/Title';
 
 const animation = {
   hidden: {

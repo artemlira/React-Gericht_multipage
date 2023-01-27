@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './Reservation.module.scss';
-import Button from './../../Button/Button';
-import Title from './../../Title/Title';
+import Button from '../../Button/Button';
+import Title from '../../Title/Title';
 
 
 export default function Reservation() {

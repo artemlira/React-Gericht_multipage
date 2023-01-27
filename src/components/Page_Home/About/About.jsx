@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './About.module.scss';
-import Button from './../../Button/Button';
+import Button from '../../Button/Button';
 import logo from '../../../images/Hero/iconLogo.svg';
 import { motion } from 'framer-motion';
 

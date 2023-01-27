@@ -1,6 +1,6 @@
 import React, { forwardRef } from 'react';
 import styles from './Blog.module.scss';
-import Button from './../../Button/Button';
+import Button from '../../Button/Button';
 import { motion } from 'framer-motion';
 import { isWebpSupported } from 'react-image-webp/dist/utils';
 import Title from '../../Title/Title';

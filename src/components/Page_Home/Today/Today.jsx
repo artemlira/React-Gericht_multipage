@@ -1,8 +1,8 @@
 import React from 'react';
 import styles from './Today.module.scss';
-import Button from './../../Button/Button';
+import Button from '../../Button/Button';
 import { motion } from 'framer-motion';
-import Title from './../../Title/Title';
+import Title from '../../Title/Title';
 
 
 

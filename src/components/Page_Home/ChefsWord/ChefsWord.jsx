@@ -5,7 +5,7 @@ import Image from 'react-image-webp';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, EffectCreative } from "swiper";
 import './ChefsWordSlider.scss'
-import Title from './../../Title/Title';
+import Title from '../../Title/Title';
 
 const animationLeft = {
   hidden: {
