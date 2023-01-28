@@ -3,9 +3,8 @@
 @use '../../styles/functions.scss' as f;
 
 .footer {
-  border: 1px solid red;
   background: url('../../images/line1.png') right -9957px no-repeat, url('../../images/line2.png') left -9957px no-repeat, url('../../images/Footer/BG.jpg') center 334px / cover no-repeat, #0C0B08;
-  
+  padding-bottom: f.rem(128);
 }
 
 .bgIcon {
@@ -13,14 +12,15 @@
   width: 146px;
   height: 146px;
   background: url('../../images/icon.png') center / cover no-repeat;
-  top: -60px;
-  left: -14px;
+  top: -165px;
+  left: -204px;
   z-index: 10;
 
-  @include m.laptop {
-    bottom: 20px;
-    right: 20px;
+  @media screen and (max-width:1740px) {
+    @include m.adaptiv-value('left', -180, 180, 1);
   }
+
+  @include m.laptop {}
 
   @include m.phone {
     width: 106px;
@@ -30,4 +30,185 @@
 
 .container {
   position: relative;
+  margin-top: f.rem(113);
+  @include m.adaptiv-value('margin-inline', 190, -190, 1);
+}
+
+.newsletter {
+
+  padding-block: f.rem(64);
+  @include m.adaptiv-value('padding-inline', 252, -100, 1);
+  background: #0C0C0C;
+  border: 1px solid rgba(220, 202, 135, 0.2);
+  box-shadow: 22px 30px 95px 1px rgba(0, 0, 0, 0.7);
+
+  @include m.netbook {
+    max-width: 80vw;
+    margin-inline: auto;
+  }
+
+  &:not(:last-child) {
+    margin-bottom: f.rem(128);
+  }
+}
+
+.footerTitle {
+  &:not(:last-child) {
+    margin-bottom: f.rem(24) !important;
+  }
+}
+
+.newsletterText {
+  text-align: center;
+  line-height: f.ratio(16, 28);
+
+  &:not(:last-child) {
+    margin-bottom: f.rem(64);
+  }
+}
+
+.subscribe {
+  display: flex;
+  gap: f.rem(32);
+}
+
+.subscribeInput {
+  flex: 1 1 auto;
+  height: 60px;
+  border: 1px solid #F5EFDB;
+  background-color: transparent;
+  color: v.$grey;
+  padding-left: f.rem(18);
+  font-family: v.$Cormorant;
+  font-weight: 600;
+  line-height: f.ratio(16, 28);
+  font-size: f.rem(16);
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  gap: f.rem(15);
+
+  @include m.netbook {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 'contacts schedule' 'logo logo';
+    place-items: center;
+  }
+
+  &:not(:last-child) {
+    margin-bottom: f.rem(80);
+  }
+}
+
+.contacts {
+  grid-area: contacts;
+}
+
+.schedule {
+  grid-area: schedule;
+}
+
+.contentLogo {
+  grid-area: logo;
+}
+
+.contacts,
+.schedule {
+  padding-top: f.rem(25);
+  text-align: center;
+}
+
+.contactsTitle,
+.scheduleTitle {
+  color: v.$f5e;
+  font-weight: 400;
+  font-size: f.rem(32);
+  line-height: f.ratio(32, 41.6);
+  text-align: center;
+
+  &:not(:last-child) {
+    margin-bottom: f.rem(24);
+  }
+}
+
+.contactsText,
+.businessHours {
+  line-height: f.ratio(16, 28);
+
+  &:not(:last-child) {
+    margin-bottom: f.rem(8);
+  }
+}
+
+.weekdays {
+  line-height: f.ratio(16, 28);
+}
+
+.contactsPhone {
+  display: block;
+  text-decoration: none;
+  color: v.$grey;
+  line-height: f.ratio(16, 28);
+  text-align: center;
+
+  &:not(:last-child) {
+    margin-bottom: f.rem(8);
+  }
+}
+
+.contentLogo {
+  max-width: 438px;
+  text-align: center;
+}
+
+.logoTitle {
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: f.rem(64);
+  line-height: f.ratio(64, 83.2);
+
+  &:not(:last-child) {
+    margin-bottom: f.rem(32);
+  }
+}
+
+.logoText {
+  line-height: f.ratio(16, 28);
+
+  &:not(:last-child) {
+    margin-bottom: f.rem(16);
+  }
+}
+
+.logoImg {
+  width: 40px;
+  height: 10px;
+  margin-inline: auto;
+
+  &:not(:last-child) {
+    margin-bottom: f.rem(16);
+  }
+
+  img {
+    max-width: 100%;
+    object-fit: contain;
+  }
+}
+
+.logoIcons {
+  display: flex;
+  gap: f.rem(16);
+  justify-content: center;
+
+  svg {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+.footerText {
+  text-align: center;
+  line-height: f.ratio(16, 28);
 }
