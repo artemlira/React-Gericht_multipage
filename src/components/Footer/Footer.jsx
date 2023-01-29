@@ -14,6 +14,7 @@ export default function Footer() {
       <div className="container">
         <div className={styles.container}>
           <div className={styles.bgIcon}></div>
+          <a href='#hero' className={styles.toTop}>Top</a>
           <div className={styles.newsletter}>
             <Title className={styles.footerTitle} text="Newsletter" title="Subscribe to Our Newsletter" />
             <div className={styles.newsletterText}>
@@ -21,7 +22,7 @@ export default function Footer() {
             </div>
             <div className={styles.subscribe}>
               <input type="text" placeholder='Email Address' className={styles.subscribeInput} />
-              <Button text="Subscribe" />
+              <Button className={styles.footerBtn} text="Subscribe" />
             </div>
           </div>
           <div className={styles.content}>

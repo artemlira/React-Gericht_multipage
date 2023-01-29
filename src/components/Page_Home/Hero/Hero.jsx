@@ -19,7 +19,7 @@ export default function Hero() {
   };
 
   return (
-    <section className={styles.hero}>
+    <section id="hero" className={styles.hero}>
       <div className="container">
         <div className={styles.container}>
           <div className={styles.contant}>

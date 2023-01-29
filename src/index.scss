@@ -109,3 +109,18 @@ html {
     }
   }
 }
+
+.active-header {
+
+  &::after {
+    display: block;
+    position: absolute;
+    content: '';
+    height: 2px;
+    background-color: v.$white;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    transition: all 0.3s;
+  }
+}

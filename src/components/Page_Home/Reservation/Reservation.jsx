@@ -6,11 +6,11 @@ import Title from '../../Title/Title';
 
 export default function Reservation() {
   return (
-    <section className={styles.reservation}>
+    <section id="reservation" className={styles.reservation}>
       <div className="container">
         <div className={styles.container}>
           <div className={styles.bgIcon}></div>
-          <Title text="Reservations" title="Book A Table"/>
+          <Title text="Reservations" title="Book A Table" />
           <div className={styles.dialogBox}>
             <form className={styles.dialogForm} action="/">
               <input className={styles.text} type="text" placeholder='1 person' />
