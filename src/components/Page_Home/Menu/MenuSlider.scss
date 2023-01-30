@@ -10,16 +10,16 @@
 
   .swiper-pagination {
     position: absolute;
-    left: 26px;
+    left: 1.625rem;
     top: 50%;
     transform: translateY(-50%);
     display: flex;
     flex-direction: column;
-    row-gap: 64px;
+    row-gap: 4rem;
     z-index: 10;
 
     @include m.phone {
-      row-gap: 32px;
+      row-gap: 2rem;
     }
   }
 
@@ -27,20 +27,20 @@
     display: flex;
     font-family: v.$Cormorant;
     font-weight: 600;
-    font-size: f.rem(64);
+    font-size: 4rem;
     line-height: f.ratio(64, 83.2);
     letter-spacing: 0.03em;
     color: v.$white;
 
     @include m.phone {
-      font-size: f.rem(40);
+      font-size:2.5rem;
       line-height: f.ratio(40, 60);
     }
   }
 
   .swiper-pagination-bullet-active {
     text-decoration: underline;
-    text-underline-offset: 10px;
+    text-underline-offset: 0.625rem;
   }
 
 }

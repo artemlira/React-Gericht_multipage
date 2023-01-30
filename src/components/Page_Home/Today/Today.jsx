@@ -91,7 +91,6 @@ export default function Today () {
                     name={i.name}
                     composition={i.composition}
                     price={i.price}
-                    styles={styles}
                   />)}
               </motion.ul>
             </motion.div>
@@ -105,7 +104,7 @@ export default function Today () {
   );
 }
 
-const ItemMenu = ({ name, composition, price, styles }) => (
+const ItemMenu = ({ name, composition, price }) => (
   <li className={styles.wrapperItem}>
     <div className={styles.ItemTitle}>
       <h6 className={styles.name}>{name}</h6>
@@ -118,6 +117,5 @@ const ItemMenu = ({ name, composition, price, styles }) => (
 ItemMenu.propTypes = {
   name: PropTypes.node.isRequired,
   composition: PropTypes.node.isRequired,
-  price: PropTypes.node.isRequired,
-  styles: PropTypes.node.isRequired
+  price: PropTypes.node.isRequired
 };

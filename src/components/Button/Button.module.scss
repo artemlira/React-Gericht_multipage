@@ -3,7 +3,7 @@
 @use '../../styles/functions.scss' as f;
 
 .button {
-  padding: f.rem(8) f.rem(32);
+  padding: 0.5rem 2rem;
   background: v.$gold;
   cursor: pointer;
   font-family: v.$Cormorant;

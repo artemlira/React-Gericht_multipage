@@ -4,7 +4,7 @@ import styles from './Button.module.scss';
 
 Button.propTypes = {
   text: PropTypes.node.isRequired,
-  className: PropTypes.node.isRequired
+  className: PropTypes.node
 };
 
 export default function Button ({ text, className }) {

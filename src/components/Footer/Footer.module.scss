@@ -3,21 +3,21 @@
 @use '../../styles/functions.scss' as f;
 
 .footer {
-  background: url('../../images/line1.png') right -9957px no-repeat, url('../../images/line2.png') left -9957px no-repeat, url('../../images/Footer/BG.jpg') center 334px / cover no-repeat, #0C0B08;
-  padding-bottom: f.rem(128);
+  background: url('../../images/line1.png') right -622.3125rem no-repeat, url('../../images/line2.png') left -622.3125rem no-repeat, url('../../images/Footer/BG.jpg') center 20.875rem / cover no-repeat, #0C0B08;
+  padding-bottom: 8rem;
 
   @include m.phone {
-    padding-bottom: f.rem(50);
+    padding-bottom: 3.125rem;
   }
 }
 
 .bgIcon {
   position: absolute;
-  width: 146px;
-  height: 146px;
+  width: 9.125rem;
+  height: 9.125rem;
   background: url('../../images/icon.png') center / cover no-repeat;
-  top: -165px;
-  left: -204px;
+  top: -10.3125rem;
+  left: -12.75rem;
   z-index: 10;
 
   @media screen and (max-width:1740px) {
@@ -27,15 +27,15 @@
   @include m.laptop {}
 
   @include m.phone {
-    width: 106px;
-    height: 106px;
+    width: 6.625rem;
+    height: 6.625rem;
   }
 }
 
 .toTop {
   position: absolute;
   bottom: 45%;
-  right: -180px;
+  right: -11.25rem;
   transform: translateX(-50%);
   font-family: v.$Cormorant;
   font-weight: 700;
@@ -55,7 +55,7 @@
 
   @include m.netbook {
     bottom: 45%;
-    right: 0px;
+    right: 0rem;
   }
 
   @include m.phone {
@@ -65,10 +65,10 @@
   &::after {
     content: '';
     background: linear-gradient(270deg, #DCCA87 -19.44%, #DCCA87 44.12%, rgba(220, 202, 135, 0.24) 117.57%);
-    width: 61px;
-    height: 1px;
+    width: 3.8125rem;
+    height: 0.0625rem;
     position: absolute;
-    top: -50px;
+    top: -3.125rem;
     left: -50%;
     transform: rotate(-90deg);
   }
@@ -76,42 +76,42 @@
 
 .container {
   position: relative;
-  margin-top: f.rem(113);
+  margin-top: 7.0625rem;
   @include m.adaptiv-value('margin-inline', 190, -190, 1);
 
   @include m.netbook {
     max-width: 100vw;
-    margin-inline: 0px;
+    margin-inline: 0rem;
   }
 }
 
 .newsletter {
-  padding-block: f.rem(64);
+  padding-block: 4rem;
   @include m.adaptiv-value('padding-inline', 252, -100, 1);
   background: #0C0C0C;
   border: 1px solid rgba(220, 202, 135, 0.2);
-  box-shadow: 22px 30px 95px 1px rgba(0, 0, 0, 0.7);
+  box-shadow: 1.375rem 1.875rem 5.9375rem 0.0625rem rgba(0, 0, 0, 0.7);
 
   @include m.netbook {
     max-width: 90vw;
     margin-inline: auto;
-    padding-inline: f.rem(20);
+    padding-inline: 1.25rem;
   }
 
 
 
   &:not(:last-child) {
-    margin-bottom: f.rem(128);
+    margin-bottom: 8rem;
 
     @include m.phone {
-      margin-bottom: f.rem(50);
+      margin-bottom: 3.125rem;
     }
   }
 }
 
 .footerTitle {
   &:not(:last-child) {
-    margin-bottom: f.rem(24) !important;
+    margin-bottom: 1.5rem !important;
   }
 }
 
@@ -120,13 +120,13 @@
   line-height: f.ratio(16, 28);
 
   &:not(:last-child) {
-    margin-bottom: f.rem(64);
+    margin-bottom: 4rem;
   }
 }
 
 .subscribe {
   display: flex;
-  gap: f.rem(32);
+  gap: 2rem;
 
   @include m.phone {
     flex-direction: column;
@@ -135,27 +135,27 @@
 
 .footerBtn {
   @include m.phone {
-    height: 60px;
+    height: 3.75rem;
   }
 }
 
 .subscribeInput {
   flex: 1 1 auto;
-  height: 60px;
+  height: 3.75rem;
   border: 1px solid #F5EFDB;
   background-color: transparent;
   color: v.$grey;
-  padding-left: f.rem(18);
+  padding-left: 1.125rem;
   font-family: v.$Cormorant;
   font-weight: 600;
   line-height: f.ratio(16, 28);
-  font-size: f.rem(16);
+  font-size: 1rem;
 }
 
 .content {
   display: flex;
   justify-content: space-between;
-  gap: f.rem(15);
+  gap: 0.9375rem;
 
   @include m.netbook {
     display: grid;
@@ -170,7 +170,7 @@
   }
 
   &:not(:last-child) {
-    margin-bottom: f.rem(80);
+    margin-bottom: 5rem;
   }
 }
 
@@ -188,7 +188,7 @@
 
 .contacts,
 .schedule {
-  padding-top: f.rem(25);
+  padding-top: 1.5625rem;
   text-align: center;
 }
 
@@ -196,17 +196,17 @@
 .scheduleTitle {
   color: v.$f5e;
   font-weight: 400;
-  font-size: f.rem(32);
+  font-size: 2rem;
   line-height: f.ratio(32, 41.6);
   text-align: center;
 
   @include m.phone {
-    font-size: f.rem(23);
+    font-size: 1.4375rem;
     line-height: f.ratio(23, 31.6);
   }
 
   &:not(:last-child) {
-    margin-bottom: f.rem(24);
+    margin-bottom: 1.5rem;
   }
 }
 
@@ -215,7 +215,7 @@
   line-height: f.ratio(16, 28);
 
   &:not(:last-child) {
-    margin-bottom: f.rem(8);
+    margin-bottom: 0.5rem;
   }
 }
 
@@ -231,28 +231,28 @@
   text-align: center;
 
   &:not(:last-child) {
-    margin-bottom: f.rem(8);
+    margin-bottom: 0.5rem;
   }
 }
 
 .contentLogo {
-  max-width: 438px;
+  max-width: 27.375rem;
   text-align: center;
 }
 
 .logoTitle {
   font-weight: 700;
   text-transform: uppercase;
-  font-size: f.rem(64);
+  font-size: 4rem;
   line-height: f.ratio(64, 83.2);
 
   @include m.phone {
-    font-size: f.rem(40);
+    font-size: 2.5rem;
     line-height: f.ratio(40, 63.2);
   }
 
   &:not(:last-child) {
-    margin-bottom: f.rem(32);
+    margin-bottom: 2rem;
   }
 }
 
@@ -260,17 +260,17 @@
   line-height: f.ratio(16, 28);
 
   &:not(:last-child) {
-    margin-bottom: f.rem(16);
+    margin-bottom: 1rem;
   }
 }
 
 .logoImg {
-  width: 40px;
-  height: 10px;
+  width: 2.5rem;
+  height: 0.625rem;
   margin-inline: auto;
 
   &:not(:last-child) {
-    margin-bottom: f.rem(16);
+    margin-bottom: 1rem;
   }
 
   img {
@@ -281,12 +281,12 @@
 
 .logoIcons {
   display: flex;
-  gap: f.rem(16);
+  gap: 1rem;
   justify-content: center;
 
   svg {
-    width: 24px;
-    height: 24px;
+    width: 1.5rem;
+    height: 1.5rem;
   }
 }
 

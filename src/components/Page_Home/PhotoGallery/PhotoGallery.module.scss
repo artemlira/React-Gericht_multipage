@@ -3,43 +3,43 @@
 @use '../../../styles/functions.scss' as f;
 
 .photoGallery {
-  background: url('../../../images/line1.png') right -9220px no-repeat, url('../../../images/line2.png') left -9220px no-repeat, url('../../../images/ChefsWord/BG.jpg')center / cover no-repeat;
+  background: url('../../../images/line1.png') right -576.25rem no-repeat, url('../../../images/line2.png') left -576.25rem no-repeat, url('../../../images/ChefsWord/BG.jpg')center / cover no-repeat;
   overflow: clip;
 }
 
 .container {
-  margin-block: f.rem(128);
+  margin-block: 8rem;
   display: flex;
-  gap: f.rem(64);
+  gap: 4rem;
   position: relative;
   right: 0;
   @include m.adaptiv-value('left', 190, -190, 1);
 
   @include m.laptop {
-    margin-block: f.rem(100);
+    margin-block:6.25rem;
     flex-direction: column;
     left: 0;
     align-items: center;
   }
 
   @include m.phone {
-    margin-block: f.rem(20);
+    margin-block: 1.25rem;
   }
 }
 
 .content {
-  flex: 0 0 461px;
-  padding-block: f.rem(81);
+  flex: 0 0 28.8125rem;
+  padding-block: 5.0625rem;
 
   @include m.phone {
-    padding-block: f.rem(20);
+    padding-block: 1.25rem;
     flex: 0 0 auto;
   }
 }
 
 .galleryTitle {
   &:not(:last-child) {
-    margin-bottom: f.rem(24);
+    margin-bottom: 1.5rem;
   }
 }
 
@@ -56,7 +56,7 @@
   }
 
   &:not(:last-child) {
-    margin-bottom: f.rem(24);
+    margin-bottom: 1.5rem;
   }
 }
 

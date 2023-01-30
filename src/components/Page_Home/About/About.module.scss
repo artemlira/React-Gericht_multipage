@@ -3,8 +3,8 @@
 @use '../../../styles/functions.scss' as f;
 
 .about {
-  min-height: 959px;
-  padding-block: f.rem(128);
+  min-height: 59.9375rem;
+  padding-block: 8rem;
   @include m.adaptiv-value('padding-inline', 207, -50, 1);
   background: url('../../../images/About/img1.png') center center no-repeat, url('../../../images/About/G.png') center center no-repeat, url('../../../images/About/bg1.jpg')center/cover no-repeat;
   display: grid;
@@ -45,31 +45,31 @@
 
 .title {
   font-weight: 600;
-  font-size: f.rem(64);
+  font-size: 4rem;
   line-height: f.ratio(64, 83.2);
   letter-spacing: 0.03em;
 
   &:not(:last-child) {
-    margin-bottom: f.rem(8);
+    margin-bottom:0.5rem;
   }
 
   @media screen and (max-width:600px) {
-    font-size: f.rem(50);
+    font-size: 3.125rem;
     line-height: f.ratio(50, 78);
   }
 
   @include m.phone {
-    font-size: f.rem(40);
+    font-size: 2.5rem;
     line-height: f.ratio(40, 68);
   }
 }
 
 .logo {
-  width: 40px;
-  height: 10px;
+  width: 2.5rem;
+  height: 0.625rem;
 
   &:not(:last-child) {
-    margin-bottom: f.rem(32);
+    margin-bottom: 2rem;
   }
 
   img {
@@ -79,12 +79,12 @@
 }
 
 .text {
-  max-width: 523px;
+  max-width: 32.6875rem;
   color: v.$grey;
   line-height: f.ratio(16, 28);
   letter-spacing: 0.04em;
 
   &:not(:last-child) {
-    margin-bottom: f.rem(32);
+    margin-bottom: 2rem;
   }
 }

@@ -17,6 +17,6 @@ export default function Title ({ text, className, title }) {
 
 Title.propTypes = {
   text: PropTypes.node.isRequired,
-  className: PropTypes.node.isRequired,
+  className: PropTypes.node,
   title: PropTypes.node.isRequired
 };

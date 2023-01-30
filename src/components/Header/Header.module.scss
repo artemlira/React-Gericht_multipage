@@ -3,7 +3,7 @@
 @use '../../styles/functions.scss' as f;
 
 .header {
-  padding-block: f.rem(32);
+  padding-block: 2rem;
   background: #0C0B08;
   position: sticky;
   top: 0;
@@ -24,7 +24,7 @@
   a {
     font-family: v.$Cormorant;
     font-weight: 700;
-    font-size: f.rem(44);
+    font-size: 2.75rem;
     line-height: f.ratio(44, 57.2);
     letter-spacing: 0.04em;
     text-transform: uppercase;
@@ -67,11 +67,11 @@
 
   .navList {
     flex-direction: column;
-    row-gap: f.rem(35);
+    row-gap: 2.1875rem;
     align-items: center;
 
     a {
-      font-size: f.rem(28);
+      font-size: 1.75rem;
     }
   }
 
@@ -79,9 +79,9 @@
 
 .navList {
   display: flex;
-  column-gap: f.rem(32);
+  column-gap: 2rem;
   flex-wrap: wrap;
-  padding-inline: f.rem(15);
+  padding-inline: 0.9375rem;
 
   a {
     line-height: f.ratio(16, 28);
@@ -99,7 +99,7 @@
     display: block;
     position: absolute;
     content: '';
-    height: 2px;
+    height: 0.125rem;
     background-color: v.$white;
     bottom: 0;
     left: 0;
@@ -114,24 +114,24 @@
 
 .registration {
   display: flex;
-  column-gap: f.rem(100);
+  column-gap: 6.25rem;
 
   @include m.laptop {
-    column-gap: f.rem(50);
+    column-gap: 3.125rem;
   }
 }
 
 .registration.active {
   flex-direction: column;
-  row-gap: f.rem(30);
+  row-gap: 1.875rem;
   align-items: center;
-  margin-top: f.rem(50);
+  margin-top: 3.125rem;
 
 
   .table,
   .logIn {
     a {
-      font-size: f.rem(28);
+      font-size: 1.75rem;
       line-height: f.ratio(28, 36);
 
     }
@@ -144,21 +144,21 @@
   &::after {
     display: inline-block;
     content: '';
-    height: 57px;
-    width: 1px;
+    height: 3.5625rem;
+    width: 0.0625rem;
     background: radial-gradient(50% 50% at 50% 50%, #FFFFFF 58.85%, rgba(255, 255, 255, 0) 100%);
     position: absolute;
-    right: -50px;
+    right: -3.125rem;
     top: 50%;
     transform: translateY(-50%);
 
     @include m.laptop {
-      right: -25px;
+      right: -1.5625rem;
     }
   }
 
   @include m.tablet {
-    max-width: 290px;
+    max-width: 18.125rem;
     text-align: center;
   }
 }
@@ -178,7 +178,7 @@
       display: block;
       position: absolute;
       content: '';
-      height: 2px;
+      height: 0.125rem;
       background-color: v.$white;
       bottom: 0;
       left: 0;
@@ -193,8 +193,8 @@
 }
 
 .burgerMenu {
-  width: 50px;
-  height: 50px;
+  width: 3.125rem;
+  height: 3.125rem;
   display: grid;
   place-content: center;
   cursor: pointer;
@@ -206,27 +206,27 @@
 }
 
 .menuTablet {
-  height: 1px;
-  width: 50px;
+  height: 0.0625rem;
+  width: 3.125rem;
   background-color: #fff;
   position: relative;
 
   &::after,
   &::before {
     content: '';
-    height: 1px;
-    width: 50px;
+    height: 0.0625rem;
+    width: 3.125rem;
     background-color: #fff;
     position: absolute;
     transition: all 0.8s;
   }
 
   &::after {
-    top: 12px;
+    top: 0.75rem;
   }
 
   &::before {
-    bottom: 12px;
+    bottom: 0.75rem;
   }
 }
 

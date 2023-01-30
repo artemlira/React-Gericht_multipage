@@ -3,16 +3,16 @@
 @use '../../../styles/functions.scss' as f;
 
 .hero {
-  padding-block: f.rem(48) f.rem(152);
+  padding-block: 3rem 9.5rem;
   background: url('../../../images/line1.png')right -8.5% no-repeat, #0C0B08;
 
   @include m.phone {
-    padding-block: f.rem(48);
+    padding-block: 3rem;
   }
 }
 
 .container {
-  min-height: 828px;
+  min-height: 51.75rem;
   display: flex;
 
   @include m.netbook {
@@ -26,39 +26,39 @@
 
 .contant {
   flex: 0 1 50%;
-  padding-block: f.rem(127);
+  padding-block: 7.9375rem;
   @include m.adaptiv-value('padding-left', 180, -50, 1);
   @include m.adaptiv-value('padding-right', 190, -50, 1);
 
 
   @include m.laptop {
-    padding-block: f.rem(80);
+    padding-block: 5rem;
     @include m.adaptiv-value('padding-left', 140, -50, 1);
     @include m.adaptiv-value('padding-right', 150, -50, 1);
   }
 }
 
 .logo {
-  margin-bottom: f.rem(8);
+  margin-bottom: 0.5rem;
 }
 
 .logoText {
   font-family: v.$Cormorant;
   font-weight: 700;
   color: v.$white;
-  font-size: f.rem(23);
+  font-size: 1.4375rem;
   line-height: f.ratio(23, 29.9);
   letter-spacing: 0.04em;
   text-transform: capitalize;
 
   &:not(:last-child) {
-    margin-bottom: f.rem(8);
+    margin-bottom: 0.5rem;
   }
 }
 
 .logoImg {
-  width: 40px;
-  height: 10px;
+  width: 2.5rem;
+  height: 0.625rem;
 
   img {
     max-width: 100;
@@ -69,24 +69,24 @@
 .title {
   font-family: v.$Cormorant;
   font-weight: 700;
-  font-size: f.rem(90);
+  font-size:5.625rem;
   line-height: f.ratio(90, 113);
   color: v.$gold;
   letter-spacing: 0.04em;
   text-transform: capitalize;
 
   @include m.laptop {
-    font-size: f.rem(80);
+    font-size: 5rem;
     line-height: f.ratio(80, 103);
   }
 
   @include m.phone {
-    font-size: f.rem(50);
+    font-size: 3.125rem;
     line-height: f.ratio(50, 73);
   }
 
   &:not(:last-child) {
-    margin-bottom: f.rem(32);
+    margin-bottom: 2rem;
   }
 }
 
@@ -96,14 +96,14 @@
   letter-spacing: 0.04em;
 
   &:not(:last-child) {
-    margin-bottom: f.rem(32);
+    margin-bottom:2rem;
   }
 }
 
 .slider {
-  max-height: 736px + 92px;
+  max-height: 46rem + 5.75rem;
   position: relative;
-  padding-bottom: f.rem(92) !important;
+  padding-bottom: 5.75rem !important;
 
   @include m.tablet {
     width: 80vw;
@@ -128,15 +128,15 @@
 
   &::before {
     left: 0;
-    bottom: 90px;
+    bottom: 5.625rem;
   }
 }
 
 .slide {
-  max-width: 619px;
-  padding: f.rem(24);
+  max-width: 38.6875rem;
+  padding: 1.5rem;
   position: relative;
-  transform: translateX(10px);
+  transform: translateX(0.625rem);
 
   img {
     height: 100%;
@@ -171,10 +171,10 @@
   &::after {
     content: '';
     background: linear-gradient(270deg, #DCCA87 -19.44%, #DCCA87 44.12%, rgba(220, 202, 135, 0.24) 117.57%);
-    width: 61px;
-    height: 1px;
+    width: 3.8125rem;
+    height: 0.0625rem;
     position: absolute;
-    top: -50px;
+    top: -3.125rem;
     left: 0;
     transform: rotate(-90deg);
   }

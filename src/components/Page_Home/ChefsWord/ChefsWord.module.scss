@@ -8,38 +8,38 @@
 }
 
 .container {
-  margin-block: f.rem(128);
+  margin-block: 8rem;
   @include m.adaptiv-value('margin-inline', 190, -190, 1);
   display: flex;
   flex-direction: row-reverse;
-  column-gap: f.rem(111);
+  column-gap: 6.9375rem;
   align-items: center;
   overflow: hidden;
 
   @include m.laptop {
     flex-direction: column-reverse;
     align-items: center;
-    margin-inline: 0px;
+    margin-inline: 0rem;
   }
 }
 
 .image {
-  height: 691px;
-  flex: 0 0 555px;
-  padding-left: f.rem(72);
+  height: 43.1875rem;
+  flex: 0 0 34.6875rem;
+  padding-left: 4.5rem;
   position: relative;
 
   @include m.laptop {
-    max-height: 691px;
-    max-width: 555px;
+    max-height: 43.1875rem;
+    max-width: 34.6875rem;
     height: 80vw;
     width: 80vw;
     flex: 0 0 auto;
   }
 
   &::before {
-    width: 360px;
-    height: 379px;
+    width: 22.5rem;
+    height: 23.6875rem;
     content: '';
     background: url('../../../images/ChefsWord/G.png') center/cover no-repeat;
     position: absolute;
@@ -57,19 +57,19 @@
 
 .chefsWordSlider {
   height: 100%;
-  max-width: 483px;
+  max-width: 30.1875rem;
 }
 
 .contant {
   flex: 0 1 64%;
-  margin-block: f.rem(119);
+  margin-block: 7.4375rem;
 }
 
 .ChefsWordTitle {
   text-align: start;
 
   div {
-    margin-inline: 0px;
+    margin-inline: 0rem;
   }
 }
 
@@ -77,34 +77,34 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
-  column-gap: f.rem(32);
-  row-gap: f.rem(64);
+  column-gap: 2rem;
+  row-gap: 4rem;
 
   @include m.netbook {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
-    column-gap: f.rem(32);
-    row-gap: f.rem(32);
+    column-gap: 2rem;
+    row-gap: 2rem;
   }
 }
 
 .awardItem {
   display: flex;
-  column-gap: f.rem(32);
+  column-gap: 2rem;
   align-items: center;
 }
 
 .itemContent {
-  padding-right: f.rem(10);
+  padding-right: 0.625rem;
 }
 
 .itemImg {
-  flex: 0 0 79px;
-  height: 79px;
+  flex: 0 0 4.9375rem;
+  height: 4.9375rem;
 
   @include m.phone {
-    flex: 0 0 59px;
-    height: 59px;
+    flex: 0 0 3.6875rem;
+    height: 3.6875rem;
   }
 
   img {
@@ -117,12 +117,12 @@
 .itemTitle {
   font-weight: 700;
   font-family: v.$Cormorant;
-  font-size: f.rem(23);
+  font-size: 1.4375rem;
   line-height: f.ratio(23, 29.9);
   color: v.$gold;
 
   &:not(:last-child) {
-    margin-bottom: f.rem(8);
+    margin-bottom: 0.5rem;
   }
 }
 

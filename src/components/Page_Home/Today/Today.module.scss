@@ -3,8 +3,8 @@
 @use '../../../styles/functions.scss' as f;
 
 .today {
-  background: url('../../../images/line1.png')right -2600px no-repeat, #0C0B08;
-  padding-block: f.rem(152);
+  background: url('../../../images/line1.png')right -162.5rem no-repeat, #0C0B08;
+  padding-block: 9.5rem;
   @include m.adaptiv-value('padding-inline', 190, -190, 1);
 }
 
@@ -19,10 +19,10 @@
   width: 100%;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  column-gap: f.rem(32);
+  column-gap: 2rem;
 
   &:not(:last-child) {
-    margin-bottom: f.rem(65);
+    margin-bottom: 4.0625rem;
   }
 
   @include m.netbook {
@@ -40,7 +40,7 @@
 
 .wine,
 .cocktails {
-  padding-block: f.rem(32);
+  padding-block: 2rem;
 }
 
 .wine {
@@ -60,13 +60,13 @@
   text-align: center;
   font-family: v.$Cormorant;
   font-weight: 600;
-  font-size: f.rem(45);
+  font-size: 2.8125rem;
   line-height: f.ratio(45, 58.5);
   letter-spacing: 0.04em;
   color: v.$white;
 
   &:not(:last-child) {
-    margin-bottom: f.rem(48);
+    margin-bottom: 3rem;
   }
 }
 
@@ -83,10 +83,10 @@
 .cocktailsList {
   display: flex;
   flex-direction: column;
-  row-gap: f.rem(40);
+  row-gap: 2.5rem;
 
   @include m.laptop {
-    row-gap: f.rem(20);
+    row-gap: 1.25rem;
   }
 }
 
@@ -96,7 +96,7 @@
   position: relative;
 
   &:not(:last-child) {
-    margin-bottom: f.rem(8);
+    margin-bottom: 0.5rem;
   }
 
   &::after {
@@ -106,11 +106,11 @@
     background-color: v.$white;
     position: absolute;
     top: 50%;
-    right: 69px;
+    right: 4.3125rem;
     transform: translateY(-50%);
 
     @include m.tablet {
-      width: 45px;
+      width: 2.8125rem;
     }
   }
 }
@@ -119,14 +119,14 @@
 .price {
   font-family: v.$Cormorant;
   font-weight: 700;
-  font-size: f.rem(23);
+  font-size: 1.4375rem;
   line-height: f.ratio(23, 29.9);
   color: v.$gold;
   letter-spacing: 0.04em;
   text-transform: capitalize;
 
   @include m.laptop {
-    font-size: f.rem(20);
+    font-size: 1.25rem;
     line-height: f.ratio(20, 26.9);
   }
 }
