@@ -7,8 +7,7 @@ import { ReactComponent as Icon1 } from '../../images/Footer/icon01.svg';
 import { ReactComponent as Icon2 } from '../../images/Footer/icon02.svg';
 import { ReactComponent as Icon3 } from '../../images/Footer/icon03.svg';
 
-
-export default function Footer() {
+export default function Footer () {
   return (
     <footer className={styles.footer}>
       <div className="container">
@@ -34,7 +33,7 @@ export default function Footer() {
             </div>
             <div className={styles.contentLogo}>
               <h2 className={styles.logoTitle}>Gerícht</h2>
-              <p className={styles.logoText}>"The best way to find yourself is to lose yourself in the service of others.”</p>
+              <p className={styles.logoText}><q>The best way to find yourself is to lose yourself in the service of others.</q></p>
               <div className={styles.logoImg}>
                 <img src={logo} alt="logo" />
               </div>
@@ -60,6 +59,3 @@ export default function Footer() {
     </footer>
   );
 }
-
-
-

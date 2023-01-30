@@ -3,12 +3,11 @@ import styles from './PhotoGallery.module.scss';
 import Title from '../../Title/Title';
 import Button from '../../Button/Button';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay } from "swiper";
+import { Autoplay } from 'swiper';
 import Image from 'react-image-webp';
 import './GallerySlider.scss';
 
-
-export default function PhotoGallery() {
+export default function PhotoGallery () {
   return (
     <section className={styles.photoGallery}>
       <div className="container">
@@ -33,18 +32,17 @@ export default function PhotoGallery() {
               loop={true}
               breakpoints={{
                 320: {
-                  slidesPerView: 1,
+                  slidesPerView: 1
                 },
                 540: {
-                  slidesPerView: 2,
+                  slidesPerView: 2
                 },
-
                 996: {
-                  slidesPerView: 3,
+                  slidesPerView: 3
                 },
                 1280: {
-                  slidesPerView: 5.3,
-                },
+                  slidesPerView: 5.3
+                }
               }}
               className='gallery-slider'>
               <SwiperSlide>
@@ -69,6 +67,3 @@ export default function PhotoGallery() {
     </section >
   );
 }
-
-
-

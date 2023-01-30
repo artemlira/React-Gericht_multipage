@@ -1,10 +1,9 @@
-import React from 'react'
+import React from 'react';
 
-
-export default function BlogWithSidebar() {
+export default function BlogWithSidebar () {
   return (
     <article>
       BlogWithSidebar
     </article>
-  )
-}
+  );
+};

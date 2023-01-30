@@ -2,8 +2,7 @@ import React from 'react';
 import styles from './Video.module.scss';
 import { ReactComponent as Play } from '../../../images/video/Play.svg';
 
-
-export default function Video() {
+export default function Video () {
   return (
     <section className={styles.video}>
       <div className="container">
@@ -17,6 +16,3 @@ export default function Video() {
     </section>
   );
 }
-
-
-

@@ -1,4 +1,5 @@
 import React, { forwardRef } from 'react';
+import PropTypes from 'prop-types';
 import { motion } from 'framer-motion';
 import styles from './Testimony.module.scss';
 import { isWebpSupported } from 'react-image-webp/dist/utils';
@@ -7,14 +8,14 @@ import Title from '../../Title/Title';
 const animation = {
   hidden: {
     y: 100,
-    opacity: 0,
+    opacity: 0
   },
   visible: custom => ({
     y: 0,
     opacity: 1,
     transition: { delay: custom * 0.1 }
   })
-}
+};
 
 const testimonyBD = [
   {
@@ -22,32 +23,32 @@ const testimonyBD = [
     photoWebp: '../../../images/Testimony/01.webp',
     text: 'Lorem ipsum dolor sit amet, consectetur adipiscing sit. auctor sit iaculis in arcu. Vulputate nulla lobortis mauris eget sit. Nulla scelerisque scelerisque congue.',
     author: 'Wade Warren',
-    position: 'Sommelier',
+    position: 'Sommelier'
   },
   {
     photo: '../../../images/Testimony/02.jpg',
     photoWebp: '../../../images/Testimony/02.webp',
     text: 'Lorem ipsum dolor sit amet, consectetur adipiscing sit. auctor sit iaculis in arcu. Vulputate nulla lobortis mauris eget sit. Nulla scelerisque scelerisque congue.',
     author: 'Jane Cooper',
-    position: 'Chef',
+    position: 'Chef'
   },
   {
     photo: '../../../images/Testimony/03.jpg',
     photoWebp: '../../../images/Testimony/03.webp',
     text: 'Lorem ipsum dolor sit amet, consectetur adipiscing sit. auctor sit iaculis in arcu. Vulputate nulla lobortis mauris eget sit. Nulla scelerisque scelerisque congue.',
     author: 'Robert Fox',
-    position: 'Chef',
+    position: 'Chef'
   },
   {
     photo: '../../../images/Testimony/04.jpg',
     photoWebp: '../../../images/Testimony/04.webp',
     text: 'Lorem ipsum dolor sit amet, consectetur adipiscing sit. auctor sit iaculis in arcu. Vulputate nulla lobortis mauris eget sit. Nulla scelerisque scelerisque congue.',
     author: 'Brooklyn Simmons',
-    position: 'Caterer',
-  },
-]
+    position: 'Caterer'
+  }
+];
 
-export default function Testimony() {
+export default function Testimony () {
   return (
     <section className={styles.testimony}>
       <div className="container">
@@ -94,7 +95,14 @@ const TestimonyItem = forwardRef(({ photo, photoWebp, text, author, position }, 
   </li>
 ));
 
+TestimonyItem.displayName = 'TestimonyItem';
+
+TestimonyItem.propTypes = {
+  photo: PropTypes.node.isRequired,
+  photoWebp: PropTypes.node.isRequired,
+  text: PropTypes.node.isRequired,
+  author: PropTypes.node.isRequired,
+  position: PropTypes.node.isRequired
+};
+
 const MTestimonyItem = motion(TestimonyItem);
-
-
-

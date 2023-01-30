@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import Hero from '../components/Page_Home/Hero/Hero';
 import About from '../components/Page_Home/About/About';
 import Reservation from '../components/Page_Home/Reservation/Reservation';
@@ -11,7 +11,7 @@ import ChefsWord from '../components/Page_Home/ChefsWord/ChefsWord';
 import Blog from '../components/Page_Home/Blog/Blog';
 import PhotoGallery from '../components/Page_Home/PhotoGallery/PhotoGallery';
 
-export default function Home() {
+export default function Home () {
   return (
     <article>
       <Hero />
@@ -26,5 +26,5 @@ export default function Home() {
       <Blog />
       <PhotoGallery />
     </article>
-  )
+  );
 }

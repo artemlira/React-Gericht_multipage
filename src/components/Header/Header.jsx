@@ -2,12 +2,12 @@ import { motion } from 'framer-motion';
 import React, { useState, forwardRef } from 'react';
 import { NavLink, Link } from 'react-router-dom';
 import styles from './Header.module.scss';
-
+import PropTypes from 'prop-types';
 
 const animation = {
   hidden: {
-    x: "100%",
-    scale: 0.3,
+    x: '100%',
+    scale: 0.3
   },
   visible: {
     x: 0,
@@ -15,15 +15,14 @@ const animation = {
     transition: { duration: 1 }
   },
   exit: {
-    x: "100%",
+    x: '100%'
   }
-}
+};
 
 const setActive = ({ isActive }) => isActive ? 'active-header' : '';
 
-export default function Header() {
+export default function Header () {
   const [openMenu, setOpenMenu] = useState(false);
-
 
   return (
     <header id='header' className={styles.header}>
@@ -48,9 +47,9 @@ export default function Header() {
   );
 }
 
-const Menu = forwardRef(({ activ }, ref) => (
-  <div className={!activ ? `${styles.navWrapper}` : `${styles.navWrapper} ${styles.active}`} ref={ref}>
-    <nav className={!activ ? `${styles.nav}` : `${styles.active} ${styles.nav}`}>
+const Menu = forwardRef(({ active }, ref) => (
+  <div className={!active ? `${styles.navWrapper}` : `${styles.navWrapper} ${styles.active}`} ref={ref}>
+    <nav className={!active ? `${styles.nav}` : `${styles.active} ${styles.nav}`}>
       <ul className={styles.navList}>
         <li className={styles.navItem}><NavLink to="/" className={setActive}>Home</NavLink></li>
         <li className={styles.navItem}><a href="#" className={styles.navLink}>Pages</a></li>
@@ -59,7 +58,7 @@ const Menu = forwardRef(({ activ }, ref) => (
         <li className={styles.navItem}><a href="#" className={styles.navLink}>Landing</a></li>
       </ul>
     </nav>
-    <div className={!activ ? `${styles.registration}` : `${styles.active} ${styles.registration}`}>
+    <div className={!active ? `${styles.registration}` : `${styles.active} ${styles.registration}`}>
       <div className={styles.logIn}>
         <a href="#">Log in / registration</a>
       </div>
@@ -70,7 +69,10 @@ const Menu = forwardRef(({ activ }, ref) => (
   </div>
 ));
 
+Menu.propTypes = {
+  active: PropTypes.node
+};
+
+Menu.displayName = 'Menu';
+
 const MMenu = motion(Menu);
-
-
-

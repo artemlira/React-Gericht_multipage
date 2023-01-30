@@ -4,24 +4,23 @@ import signature from '../../../images/Chefs/Kevin Luo.svg';
 import quotes from '../../../images/Chefs/“.png';
 import Image from 'react-image-webp';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay, EffectCreative } from "swiper";
+import { Autoplay, EffectCreative } from 'swiper';
 import './ChefsSlider.scss';
 import Title from '../../Title/Title';
 
-
-export default function Chefs() {
+export default function Chefs () {
   return (
     <section className={styles.chefs}>
       <div className="container">
         <div className={styles.container}>
           <div className={styles.image}>
             <Swiper
-              direction={"vertical"}
+              direction={'vertical'}
               modules={[EffectCreative, Autoplay]}
-              effect={"creative"}
-              creativeEffect={{ prev: { shadow: false, translate: [0, 0, 0], }, next: { translate: [0, "-100%", 0], }, }}
-              slidesPerView={1}  //кол-во слайдеров
-              loop={true}//бесконечность
+              effect={'creative'}
+              creativeEffect={{ prev: { shadow: false, translate: [0, 0, 0] }, next: { translate: [0, '-100%', 0] } }}
+              slidesPerView={1}
+              loop={true}
               autoplay={{ delay: 2000, stopOnLastSlide: false, disableOnInteraction: false }}
               speed={1500}
               className={styles.chefsSlider}>
@@ -55,6 +54,3 @@ export default function Chefs() {
     </section>
   );
 }
-
-
-

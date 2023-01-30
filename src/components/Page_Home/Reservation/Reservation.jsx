@@ -3,8 +3,7 @@ import styles from './Reservation.module.scss';
 import Button from '../../Button/Button';
 import Title from '../../Title/Title';
 
-
-export default function Reservation() {
+export default function Reservation () {
   return (
     <section id="reservation" className={styles.reservation}>
       <div className="container">
@@ -24,6 +23,3 @@ export default function Reservation() {
     </section>
   );
 }
-
-
-

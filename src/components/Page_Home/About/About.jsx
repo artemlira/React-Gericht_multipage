@@ -4,24 +4,30 @@ import Button from '../../Button/Button';
 import logo from '../../../images/Hero/iconLogo.svg';
 import { motion } from 'framer-motion';
 
-
-export default function About() {
-
+export default function About () {
   const animatedLeft = {
-    hidden: { x: "-100%", opacity: 0 },
-    visible: {
-      x: 0, opacity: 1,
-      transition: { duration: 0.8 }
+    hidden: {
+      x: '-100%',
+      opacity: 0
     },
-  }
+    visible: {
+      x: 0,
+      opacity: 1,
+      transition: { duration: 0.8 }
+    }
+  };
 
   const animatedRight = {
-    hidden: { x: "100%", opacity: 0 },
-    visible: {
-      x: 0, opacity: 1,
-      transition: { duration: 0.8 }
+    hidden: {
+      x: '100%',
+      opacity: 0
     },
-  }
+    visible: {
+      x: 0,
+      opacity: 1,
+      transition: { duration: 0.8 }
+    }
+  };
   return (
     <section className={styles.about}>
       <div className="container">
@@ -55,6 +61,3 @@ export default function About() {
     </section>
   );
 }
-
-
-

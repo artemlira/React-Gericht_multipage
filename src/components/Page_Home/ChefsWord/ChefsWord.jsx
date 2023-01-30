@@ -1,35 +1,36 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styles from './ChefsWord.module.scss';
 import { motion } from 'framer-motion';
 import Image from 'react-image-webp';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay, EffectCreative } from "swiper";
-import './ChefsWordSlider.scss'
+import { Autoplay, EffectCreative } from 'swiper';
+import './ChefsWordSlider.scss';
 import Title from '../../Title/Title';
 
 const animationLeft = {
   hidden: {
-    x: "-100%",
-    opacity: 0,
+    x: '-100%',
+    opacity: 0
   },
   visible: {
     x: 0,
     opacity: 1,
     transition: { transform: 0.8 }
   }
-}
+};
 
 const animationRight = {
   hidden: {
-    x: "100%",
-    opacity: 0,
+    x: '100%',
+    opacity: 0
   },
   visible: {
     x: 0,
     opacity: 1,
     transition: { transform: 0.8 }
   }
-}
+};
 
 const awards = [
   {
@@ -51,10 +52,10 @@ const awards = [
     title: 'Outstanding Chef',
     text: 'Lorem ipsum dolor sit amet, consectetur.',
     icon: '../../../images/ChefsWord/icon3.png'
-  },
-]
+  }
+];
 
-export default function ChefsWord() {
+export default function ChefsWord () {
   return (
     <section className={styles.chefsWord}>
       <div className="container">
@@ -68,8 +69,8 @@ export default function ChefsWord() {
             className={styles.image}>
             <Swiper
               modules={[EffectCreative, Autoplay]}
-              effect={"creative"}
-              creativeEffect={{ prev: { shadow: false, translate: [0, 0, 0], }, next: { translate: ["100%", 0, 0], }, }}
+              effect={'creative'}
+              creativeEffect={{ prev: { shadow: false, translate: [0, 0, 0] }, next: { translate: ['100%', 0, 0] } }}
               slidesPerView={1}
               loop={true}
               autoplay={{ delay: 2000, stopOnLastSlide: false, disableOnInteraction: false }}
@@ -115,5 +116,8 @@ const AwardItem = ({ title, text, icon }) => (
   </li>
 );
 
-
-
+AwardItem.propTypes = {
+  title: PropTypes.node.isRequired,
+  text: PropTypes.node.isRequired,
+  icon: PropTypes.node.isRequired
+};

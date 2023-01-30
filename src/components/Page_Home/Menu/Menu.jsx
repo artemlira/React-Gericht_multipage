@@ -1,17 +1,17 @@
 import React from 'react';
 import styles from './Menu.module.scss';
 import Image from 'react-image-webp';
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Pagination, EffectFade } from "swiper";
-import './MenuSlider.scss'
-import "swiper/css/effect-fade";
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay, Pagination, EffectFade } from 'swiper';
+import './MenuSlider.scss';
+import 'swiper/css/effect-fade';
 
-export default function Menu() {
+export default function Menu () {
   const pagination = {
     clickable: true,
     renderBullet: function (index, className, text = ['Bar Menu', 'Desserts Menu', 'Food Menu']) {
-      return '<span class="' + className + '">' + (text[index]) + "</span>";
-    },
+      return '<span class="' + className + '">' + (text[index]) + '</span>';
+    }
   };
 
   return (
@@ -21,7 +21,7 @@ export default function Menu() {
         <Swiper
           spaceBetween={30}
           slidesPerView={1}
-          effect={"fade"}
+          effect={'fade'}
           centeredSlides={true}
           autoplay={{ delay: 1500, stopOnLastSlide: false, disableOnInteraction: true }}
           speed={800}
@@ -43,6 +43,3 @@ export default function Menu() {
     </section>
   );
 }
-
-
-

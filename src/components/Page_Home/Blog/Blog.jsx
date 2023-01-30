@@ -4,18 +4,19 @@ import Button from '../../Button/Button';
 import { motion } from 'framer-motion';
 import { isWebpSupported } from 'react-image-webp/dist/utils';
 import Title from '../../Title/Title';
+import PropTypes from 'prop-types';
 
 const animation = {
   hidden: {
     y: 100,
-    opacity: 0,
+    opacity: 0
   },
   visible: custom => ({
     y: 0,
     opacity: 1,
     transition: { delay: custom * 0.2 }
   })
-}
+};
 
 const contentCards = [
   {
@@ -25,7 +26,7 @@ const contentCards = [
     author: '- Annalisa L',
     title: 'tips for prepping and caring for your grill',
     text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Volutpat mattis ipsum turpis elit elit scelerisque egestas mus in.',
-    link: 'Read More',
+    link: 'Read More'
   },
   {
     img: '../../../images/Blogs/02.jpg',
@@ -34,7 +35,7 @@ const contentCards = [
     author: '-John Micheal',
     title: 'summer cocktails and mocktails',
     text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Volutpat mattis ipsum turpis elit elit scelerisque egestas mus in.',
-    link: 'Read More',
+    link: 'Read More'
   },
   {
     img: '../../../images/Blogs/03.jpg',
@@ -43,12 +44,11 @@ const contentCards = [
     author: '-Fred W',
     title: 'easy cooking for college students',
     text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Volutpat mattis ipsum turpis elit elit scelerisque egestas mus in.',
-    link: 'Read More',
-  },
-]
+    link: 'Read More'
+  }
+];
 
-
-export default function Blog() {
+export default function Blog () {
   return (
     <section className={styles.blog}>
       <div className="container">
@@ -108,6 +108,16 @@ const CardItem = forwardRef(({ title, text, img, imgWebp, data, author, link }, 
   </li>
 ));
 
+CardItem.displayName = 'CardItem';
+
+CardItem.propTypes = {
+  title: PropTypes.node.isRequired,
+  text: PropTypes.node.isRequired,
+  img: PropTypes.node.isRequired,
+  imgWebp: PropTypes.node.isRequired,
+  data: PropTypes.node.isRequired,
+  author: PropTypes.node.isRequired,
+  link: PropTypes.node.isRequired
+};
+
 const MCardItem = motion(CardItem);
-
-

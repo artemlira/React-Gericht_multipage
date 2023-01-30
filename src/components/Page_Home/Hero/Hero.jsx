@@ -4,18 +4,16 @@ import styles from './Hero.module.scss';
 import logo from '../../../images/Hero/iconLogo.svg';
 import Image from 'react-image-webp';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay, Pagination, Navigation, EffectCreative } from "swiper";
+import { Autoplay, Pagination, Navigation, EffectCreative } from 'swiper';
 import 'swiper/css';
 
-
-export default function Hero() {
-
+export default function Hero () {
   const pagination = {
     type: 'fraction',
     clickable: true,
     renderFraction: function (currentClass, totalClass) {
-      return '0<span class="' + currentClass + '"></span>' + ' - 0' + '<span class="' + totalClass + '"></span>'
-    },
+      return '0<span class="' + currentClass + '"></span>' + ' - 0' + '<span class="' + totalClass + '"></span>';
+    }
   };
 
   return (
@@ -34,18 +32,18 @@ export default function Hero() {
           <div className={styles.sliderWrapper}>
             <Swiper
               className={styles.slider}
-              direction={"vertical"}
+              direction={'vertical'}
               centeredSlides={true}
               modules={[Pagination, EffectCreative, Autoplay, Navigation]}
-              effect={"creative"}
+              effect={'creative'}
               creativeEffect={{
-                prev: { shadow: false, translate: [0, 0, 0], },
-                next: { translate: [0, "-100%", 0], },
+                prev: { shadow: false, translate: [0, 0, 0] },
+                next: { translate: [0, '-100%', 0] }
               }}
-              spaceBetween={50} // отступ между слайдерами
-              slidesPerView={1}  //кол-во слайдеров
+              spaceBetween={50} // indent between sliders
+              slidesPerView={1} // number of sliders
               pagination={pagination}
-              loop={true}//бесконечность
+              loop={true} // infinity
               autoplay={{ delay: 2000, stopOnLastSlide: false, disableOnInteraction: false }}
               speed={1500}>
               <SwiperSlide className={styles.slide}>
@@ -60,12 +58,8 @@ export default function Hero() {
             </Swiper>
             <span className={styles.scroll}>Scroll</span>
           </div>
-
         </div>
       </div>
     </section >
   );
 }
-
-
-
