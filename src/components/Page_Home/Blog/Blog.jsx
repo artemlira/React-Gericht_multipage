@@ -1,10 +1,10 @@
 import React, { forwardRef } from 'react';
-import styles from './Blog.module.scss';
-import Button from '../../Button/Button';
 import { motion } from 'framer-motion';
 import { isWebpSupported } from 'react-image-webp/dist/utils';
-import Title from '../../Title/Title';
 import PropTypes from 'prop-types';
+import Title from '../../Title/Title';
+import Button from '../../Button/Button';
+import styles from './Blog.module.scss';
 
 const animation = {
   hidden: {
@@ -14,7 +14,7 @@ const animation = {
   visible: custom => ({
     y: 0,
     opacity: 1,
-    transition: { delay: custom * 0.2 }
+    transition: { delay: custom * 0.1 }
   })
 };
 
@@ -57,9 +57,9 @@ export default function Blog () {
           <Title text="Blogs" title="Gerícht updates" />
           <div className={styles.content}>
             <motion.ul
-              initial='hidden'
+              initial="hidden"
               whileInView="visible"
-              viewport={{ amount: 0.2, once: true }}
+              viewport={{ amount: 0.1, once: true }}
               className={styles.cardsList}>
               {contentCards.map((el, index) =>
                 <MCardItem
@@ -76,7 +76,7 @@ export default function Blog () {
                 />)}
             </motion.ul>
           </div>
-          <Button text='View More' />
+          <Button text="View More" />
         </div>
       </div>
     </section>
@@ -111,13 +111,13 @@ const CardItem = forwardRef(({ title, text, img, imgWebp, data, author, link }, 
 CardItem.displayName = 'CardItem';
 
 CardItem.propTypes = {
-  title: PropTypes.node.isRequired,
-  text: PropTypes.node.isRequired,
-  img: PropTypes.node.isRequired,
-  imgWebp: PropTypes.node.isRequired,
-  data: PropTypes.node.isRequired,
-  author: PropTypes.node.isRequired,
-  link: PropTypes.node.isRequired
+  title: PropTypes.string.isRequired,
+  text: PropTypes.string.isRequired,
+  img: PropTypes.string.isRequired,
+  imgWebp: PropTypes.string.isRequired,
+  data: PropTypes.string.isRequired,
+  author: PropTypes.string.isRequired,
+  link: PropTypes.string.isRequired
 };
 
 const MCardItem = motion(CardItem);

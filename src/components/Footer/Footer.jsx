@@ -1,11 +1,11 @@
 import React from 'react';
-import styles from './Footer.module.scss';
 import Title from '../Title/Title';
-import Button from './../Button/Button';
 import logo from '../../images/Hero/iconLogo.svg';
 import { ReactComponent as Icon1 } from '../../images/Footer/icon01.svg';
 import { ReactComponent as Icon2 } from '../../images/Footer/icon02.svg';
 import { ReactComponent as Icon3 } from '../../images/Footer/icon03.svg';
+import Button from './../Button/Button';
+import styles from './Footer.module.scss';
 
 export default function Footer () {
   return (
@@ -13,14 +13,14 @@ export default function Footer () {
       <div className="container">
         <div className={styles.container}>
           <div className={styles.bgIcon}></div>
-          <a href='#hero' className={styles.toTop}>Top</a>
+          <a href="#hero" className={styles.toTop}>Top</a>
           <div className={styles.newsletter}>
             <Title className={styles.footerTitle} text="Newsletter" title="Subscribe to Our Newsletter" />
             <div className={styles.newsletterText}>
               <p>And never miss latest Updates!</p>
             </div>
             <div className={styles.subscribe}>
-              <input type="text" placeholder='Email Address' className={styles.subscribeInput} />
+              <input type="text" placeholder="Email Address" className={styles.subscribeInput} />
               <Button className={styles.footerBtn} text="Subscribe" />
             </div>
           </div>

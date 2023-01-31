@@ -8,12 +8,12 @@ import Contacts from './pages/Contacts';
 function App () {
   return (
     <Routes>
-      <Route path='/' element={<Layout />}>
+      <Route path="/" element={<Layout />}>
         <Route index element={<Home />} />
         <Route path="blog_sidebar" element={<BlogWithSidebar />}>
           <Route />
         </Route>
-        <Route path='contacts' element={<Contacts />} />
+        <Route path="contacts" element={<Contacts />} />
       </Route>
     </Routes>
   );

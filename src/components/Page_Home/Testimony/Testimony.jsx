@@ -1,9 +1,9 @@
 import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 import { motion } from 'framer-motion';
-import styles from './Testimony.module.scss';
 import { isWebpSupported } from 'react-image-webp/dist/utils';
 import Title from '../../Title/Title';
+import styles from './Testimony.module.scss';
 
 const animation = {
   hidden: {
@@ -57,7 +57,7 @@ export default function Testimony () {
           <Title text="Testimony" title="Happy customers" />
           <div className={styles.contant}>
             <motion.ul
-              initial='hidden'
+              initial="hidden"
               whileInView="visible"
               viewport={{ amount: 0.2, once: true }}
               className={styles.contantList}>
@@ -84,8 +84,8 @@ const TestimonyItem = forwardRef(({ photo, photoWebp, text, author, position }, 
   <li className={styles.contantItem} ref={ref}>
     <div className={styles.itemPhoto}>
       {isWebpSupported()
-        ? <img src={photoWebp} alt='author' />
-        : <img src={photo} alt='author' />}
+        ? <img src={photoWebp} alt="author" />
+        : <img src={photo} alt="author" />}
     </div>
     <div className={styles.itemContant}>
       <p className={styles.itemText}>{text}</p>
@@ -98,11 +98,11 @@ const TestimonyItem = forwardRef(({ photo, photoWebp, text, author, position }, 
 TestimonyItem.displayName = 'TestimonyItem';
 
 TestimonyItem.propTypes = {
-  photo: PropTypes.node.isRequired,
-  photoWebp: PropTypes.node.isRequired,
-  text: PropTypes.node.isRequired,
-  author: PropTypes.node.isRequired,
-  position: PropTypes.node.isRequired
+  photo: PropTypes.string.isRequired,
+  photoWebp: PropTypes.string.isRequired,
+  text: PropTypes.string.isRequired,
+  author: PropTypes.string.isRequired,
+  position: PropTypes.string.isRequired
 };
 
 const MTestimonyItem = motion(TestimonyItem);

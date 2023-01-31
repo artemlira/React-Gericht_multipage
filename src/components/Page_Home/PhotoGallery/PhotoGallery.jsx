@@ -1,10 +1,10 @@
 import React from 'react';
-import styles from './PhotoGallery.module.scss';
-import Title from '../../Title/Title';
-import Button from '../../Button/Button';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper';
 import Image from 'react-image-webp';
+import Button from '../../Button/Button';
+import Title from '../../Title/Title';
+import styles from './PhotoGallery.module.scss';
 import './GallerySlider.scss';
 
 export default function PhotoGallery () {
@@ -44,7 +44,7 @@ export default function PhotoGallery () {
                   slidesPerView: 5.3
                 }
               }}
-              className='gallery-slider'>
+              className="gallery-slider">
               <SwiperSlide>
                 <Image className={styles.sliderImg} src={require('../../../images/Gallery/01.jpg')} webp={require('../../../images/Gallery/01.webp')} alt="slider" />
               </SwiperSlide>

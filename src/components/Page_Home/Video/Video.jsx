@@ -1,6 +1,6 @@
 import React from 'react';
-import styles from './Video.module.scss';
 import { ReactComponent as Play } from '../../../images/video/Play.svg';
+import styles from './Video.module.scss';
 
 export default function Video () {
   return (

@@ -1,8 +1,8 @@
 import { motion } from 'framer-motion';
 import React, { useState, forwardRef } from 'react';
 import { NavLink, Link } from 'react-router-dom';
-import styles from './Header.module.scss';
 import PropTypes from 'prop-types';
+import styles from './Header.module.scss';
 
 const animation = {
   hidden: {
@@ -23,12 +23,11 @@ const setActive = ({ isActive }) => isActive ? 'active-header' : '';
 
 export default function Header () {
   const [openMenu, setOpenMenu] = useState(false);
-
   return (
-    <header id='header' className={styles.header}>
+    <header id="header" className={styles.header}>
       <div className="container">
         <motion.div
-          initial='hidden'
+          initial="hidden"
           animate="visible"
           exit="exit"
           className={styles.container}>
@@ -36,7 +35,7 @@ export default function Header () {
             <Link to="/">Gerícht</Link>
           </div>
 
-          {!openMenu ? <Menu /> : <MMenu activ={true} variants={animation} />}
+          {!openMenu ? <Menu active={false} setOpenMenu={setOpenMenu} /> : <MMenu active={true} variants={animation} setOpenMenu={setOpenMenu} />}
 
           <div className={styles.burgerMenu} onClick={() => setOpenMenu(!openMenu)}>
             <span className={!openMenu ? `${styles.menuTablet}` : `${styles.menuTablet} ${styles.active}`}></span>
@@ -47,15 +46,25 @@ export default function Header () {
   );
 }
 
-const Menu = forwardRef(({ active }, ref) => (
+const Menu = forwardRef(({ active, setOpenMenu }, ref) => (
   <div className={!active ? `${styles.navWrapper}` : `${styles.navWrapper} ${styles.active}`} ref={ref}>
     <nav className={!active ? `${styles.nav}` : `${styles.active} ${styles.nav}`}>
-      <ul className={styles.navList}>
-        <li className={styles.navItem}><NavLink to="/" className={setActive}>Home</NavLink></li>
-        <li className={styles.navItem}><a href="#" className={styles.navLink}>Pages</a></li>
-        <li className={styles.navItem}><NavLink to="contacts" className={setActive}>Contact Us</NavLink></li>
-        <li className={styles.navItem}><a href="#" className={styles.navLink}>Blog</a></li>
-        <li className={styles.navItem}><a href="#" className={styles.navLink}>Landing</a></li>
+      <ul className={styles.navList} onClick={() => setOpenMenu(false)}>
+        <li className={styles.navItem}>
+          <NavLink to="/" className={setActive}>Home</NavLink>
+        </li>
+        <li className={styles.navItem}>
+          <a href="#" className={styles.navLink}>Pages</a>
+        </li>
+        <li className={styles.navItem}>
+          <NavLink to="contacts" className={setActive}>Contact Us</NavLink>
+        </li>
+        <li className={styles.navItem}>
+          <a href="#" className={styles.navLink}>Blog</a>
+        </li>
+        <li className={styles.navItem}>
+          <a href="#" className={styles.navLink}>Landing</a>
+        </li>
       </ul>
     </nav>
     <div className={!active ? `${styles.registration}` : `${styles.active} ${styles.registration}`}>
@@ -70,9 +79,15 @@ const Menu = forwardRef(({ active }, ref) => (
 ));
 
 Menu.propTypes = {
-  active: PropTypes.node
+  active: PropTypes.bool.isRequired,
+  setOpenMenu: PropTypes.func.isRequired
 };
 
 Menu.displayName = 'Menu';
 
 const MMenu = motion(Menu);
+
+MMenu.propTypes = {
+  active: PropTypes.bool,
+  setOpenMenu: PropTypes.func.isRequired
+};

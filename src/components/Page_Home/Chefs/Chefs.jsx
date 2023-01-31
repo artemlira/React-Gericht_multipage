@@ -1,12 +1,12 @@
 import React from 'react';
-import styles from './Chefs.module.scss';
-import signature from '../../../images/Chefs/Kevin Luo.svg';
-import quotes from '../../../images/Chefs/“.png';
 import Image from 'react-image-webp';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, EffectCreative } from 'swiper';
+import quotes from '../../../images/Chefs/“.png';
+import signature from '../../../images/Chefs/Kevin Luo.svg';
 import './ChefsSlider.scss';
 import Title from '../../Title/Title';
+import styles from './Chefs.module.scss';
 
 export default function Chefs () {
   return (

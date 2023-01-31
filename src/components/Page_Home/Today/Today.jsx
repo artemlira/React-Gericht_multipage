@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styles from './Today.module.scss';
-import Button from '../../Button/Button';
 import { motion } from 'framer-motion';
+import Button from '../../Button/Button';
 import Title from '../../Title/Title';
+import styles from './Today.module.scss';
 
 export default function Today () {
   const wine = [
@@ -53,8 +53,8 @@ export default function Today () {
           <Title text="Menu that fits you palatte" title="Today’s Special" />
           <div className={styles.contant}>
             <motion.div
-              initial='hidden'
-              whileInView='visible'
+              initial="hidden"
+              whileInView="visible"
               viewport={{ amount: 0.4, once: true }}
               className={styles.wine}>
               <motion.h4
@@ -75,8 +75,8 @@ export default function Today () {
             </motion.div>
             <div className={styles.image}></div>
             <motion.div
-              initial='hidden'
-              whileInView='visible'
+              initial="hidden"
+              whileInView="visible"
               viewport={{ amount: 0.4, once: true }}
               className={styles.cocktails}>
               <motion.h4
@@ -115,7 +115,7 @@ const ItemMenu = ({ name, composition, price }) => (
 );
 
 ItemMenu.propTypes = {
-  name: PropTypes.node.isRequired,
-  composition: PropTypes.node.isRequired,
-  price: PropTypes.node.isRequired
+  name: PropTypes.string.isRequired,
+  composition: PropTypes.string.isRequired,
+  price: PropTypes.string.isRequired
 };

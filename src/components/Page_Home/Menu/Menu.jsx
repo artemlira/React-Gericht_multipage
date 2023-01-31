@@ -1,8 +1,8 @@
 import React from 'react';
-import styles from './Menu.module.scss';
 import Image from 'react-image-webp';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination, EffectFade } from 'swiper';
+import styles from './Menu.module.scss';
 import './MenuSlider.scss';
 import 'swiper/css/effect-fade';
 

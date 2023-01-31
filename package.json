@@ -23,7 +23,9 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "add": "npx generate-react-cli component"
+    "add": "npx generate-react-cli component",
+    "lint": "eslint -c .eslintrc.json --ext .js,.jsx .",
+    "lint:fix": "npm run lint -- --fix"
   },
   "eslintConfig": {
     "extends": [

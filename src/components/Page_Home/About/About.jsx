@@ -1,8 +1,8 @@
 import React from 'react';
-import styles from './About.module.scss';
+import { motion } from 'framer-motion';
 import Button from '../../Button/Button';
 import logo from '../../../images/Hero/iconLogo.svg';
-import { motion } from 'framer-motion';
+import styles from './About.module.scss';
 
 export default function About () {
   const animatedLeft = {
@@ -32,8 +32,8 @@ export default function About () {
     <section className={styles.about}>
       <div className="container">
         <motion.div
-          initial='hidden'
-          whileInView='visible'
+          initial="hidden"
+          whileInView="visible"
           viewport={{ amount: 0.2, once: true }}
           className={styles.container}>
           <motion.div
@@ -44,7 +44,7 @@ export default function About () {
             <div className={styles.text}>
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis pharetra adipiscing ultrices vulputate posuere tristique. In sed odio nec aliquet eu proin mauris et.</p>
             </div>
-            <Button text='Know More' />
+            <Button text="Know More" />
           </motion.div>
           <motion.div
             variants={animatedRight}
@@ -54,7 +54,7 @@ export default function About () {
             <div className={styles.text}>
               <p>Adipiscing tempus ullamcorper lobortis odio tellus arcu volutpat. Risus placerat morbi volutpat habitasse interdum mi aliquam In sed odio nec aliquet.</p>
             </div>
-            <Button text='Know More' />
+            <Button text="Know More" />
           </motion.div>
         </motion.div>
       </div>

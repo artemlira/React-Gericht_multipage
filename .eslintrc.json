@@ -19,6 +19,30 @@
     "semi": [
       2,
       "always"
+    ],
+    "no-console": "warn",
+    "jsx-quotes": [
+      "error",
+      "prefer-double"
+    ],
+    "indent": [
+      "warn",
+      2
+    ],
+    "import/order": [
+      "error",
+      {
+        "groups": [
+          "builtin",
+          "external",
+          "internal",
+          "parent",
+          "sibling",
+          "index",
+          "object",
+          "type"
+        ]
+      }
     ]
   }
 }

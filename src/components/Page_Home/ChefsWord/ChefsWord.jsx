@@ -1,12 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styles from './ChefsWord.module.scss';
 import { motion } from 'framer-motion';
 import Image from 'react-image-webp';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, EffectCreative } from 'swiper';
 import './ChefsWordSlider.scss';
 import Title from '../../Title/Title';
+import styles from './ChefsWord.module.scss';
 
 const animationLeft = {
   hidden: {
@@ -60,7 +60,7 @@ export default function ChefsWord () {
     <section className={styles.chefsWord}>
       <div className="container">
         <motion.div
-          initial='hidden'
+          initial="hidden"
           whileInView="visible"
           viewport={{ amount: 0.2, once: true }}
           className={styles.container}>
@@ -117,7 +117,7 @@ const AwardItem = ({ title, text, icon }) => (
 );
 
 AwardItem.propTypes = {
-  title: PropTypes.node.isRequired,
-  text: PropTypes.node.isRequired,
-  icon: PropTypes.node.isRequired
+  title: PropTypes.string.isRequired,
+  text: PropTypes.string.isRequired,
+  icon: PropTypes.string.isRequired
 };

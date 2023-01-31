@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styles from './Title.module.scss';
 import logo from '../../images/Hero/iconLogo.svg';
+import styles from './Title.module.scss';
 
 export default function Title ({ text, className, title }) {
   return (
@@ -16,7 +16,7 @@ export default function Title ({ text, className, title }) {
 }
 
 Title.propTypes = {
-  text: PropTypes.node.isRequired,
-  className: PropTypes.node,
-  title: PropTypes.node.isRequired
+  text: PropTypes.string.isRequired,
+  className: PropTypes.string,
+  title: PropTypes.string.isRequired
 };

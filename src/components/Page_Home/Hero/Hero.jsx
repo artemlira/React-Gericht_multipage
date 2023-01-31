@@ -1,10 +1,10 @@
 import React from 'react';
-import Button from '../../Button/Button';
-import styles from './Hero.module.scss';
-import logo from '../../../images/Hero/iconLogo.svg';
 import Image from 'react-image-webp';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination, Navigation, EffectCreative } from 'swiper';
+import logo from '../../../images/Hero/iconLogo.svg';
+import Button from '../../Button/Button';
+import styles from './Hero.module.scss';
 import 'swiper/css';
 
 export default function Hero () {
