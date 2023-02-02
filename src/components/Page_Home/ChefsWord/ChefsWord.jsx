@@ -1,11 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { motion } from 'framer-motion';
-import Image from 'react-image-webp';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay, EffectCreative } from 'swiper';
-import './ChefsWordSlider.scss';
 import Title from '../../Title/Title';
+import ChefsWordSlider from './ChefsWordSlider';
 import styles from './ChefsWord.module.scss';
 
 const animationLeft = {
@@ -67,22 +64,7 @@ export default function ChefsWord () {
           <motion.div
             variants={animationRight}
             className={styles.image}>
-            <Swiper
-              modules={[EffectCreative, Autoplay]}
-              effect={'creative'}
-              creativeEffect={{ prev: { shadow: false, translate: [0, 0, 0] }, next: { translate: ['100%', 0, 0] } }}
-              slidesPerView={1}
-              loop={true}
-              autoplay={{ delay: 2000, stopOnLastSlide: false, disableOnInteraction: false }}
-              speed={1500}
-              className={styles.chefsWordSlider}>
-              <SwiperSlide>
-                <Image src={require('../../../images/ChefsWord/01.jpg')} webp={require('../../../images/ChefsWord/01.webp')} alt="slide1" />
-              </SwiperSlide>
-              <SwiperSlide>
-                <Image src={require('../../../images/ChefsWord/02.jpg')} webp={require('../../../images/ChefsWord/02.webp')} alt="slide2" />
-              </SwiperSlide>
-            </Swiper>
+            <ChefsWordSlider />
           </motion.div>
           <motion.div variants={animationLeft} className={styles.contant}>
             <Title className={styles.ChefsWordTitle} text="Awards & recognition" title="Our Laurels" />

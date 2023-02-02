@@ -22,7 +22,7 @@
     ],
     "no-console": "warn",
     "jsx-quotes": [
-      "error",
+      "warn",
       "prefer-double"
     ],
     "indent": [

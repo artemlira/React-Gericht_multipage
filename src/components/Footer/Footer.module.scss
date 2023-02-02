@@ -24,7 +24,9 @@
     @include m.adaptiv-value('left', -170, 180, 1);
   }
 
-  @include m.laptop {}
+  @include m.tablet {
+    left: 0;
+  }
 
   @include m.phone {
     width: 6.625rem;
