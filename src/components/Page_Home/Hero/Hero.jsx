@@ -27,7 +27,7 @@ export default function Hero () {
             </div>
             <h2 className={styles.title}>The key to Fine dining</h2>
             <p className={styles.text}>Sit tellus lobortis sed senectus vivamus molestie. Condimentum volutpat morbi facilisis quam scelerisque sapien. Et, penatibus aliquam amet tellus </p>
-            <Button text="Explore Menu" />
+            <Button text="Explore Menu" link="/#today" />
           </div>
           <div className={styles.sliderWrapper}>
             <Swiper

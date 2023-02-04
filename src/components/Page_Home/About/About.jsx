@@ -44,7 +44,7 @@ export default function About () {
             <div className={styles.text}>
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis pharetra adipiscing ultrices vulputate posuere tristique. In sed odio nec aliquet eu proin mauris et.</p>
             </div>
-            <Button text="Know More" />
+            <Button text="Know More" link="about" />
           </motion.div>
           <motion.div
             variants={animatedRight}
@@ -54,7 +54,7 @@ export default function About () {
             <div className={styles.text}>
               <p>Adipiscing tempus ullamcorper lobortis odio tellus arcu volutpat. Risus placerat morbi volutpat habitasse interdum mi aliquam In sed odio nec aliquet.</p>
             </div>
-            <Button text="Know More" />
+            <Button text="Know More" link="history" />
           </motion.div>
         </motion.div>
       </div>

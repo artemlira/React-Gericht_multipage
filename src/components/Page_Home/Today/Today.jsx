@@ -47,7 +47,7 @@ export default function Today () {
   };
 
   return (
-    <section className={styles.today}>
+    <section id="today" className={styles.today}>
       <div className="container">
         <div className={styles.container}>
           <Title text="Menu that fits you palatte" title="Today’s Special" />

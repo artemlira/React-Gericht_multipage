@@ -6,7 +6,7 @@ import Form from './../components/Page_Contacts/Form/Form';
 export default function Contacts () {
   return (
     <article>
-      <Hero />
+      <Hero title="contact Us" page="contact Us" />
       <Map />
       <Form />
     </article>

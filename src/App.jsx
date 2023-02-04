@@ -4,6 +4,8 @@ import Layout from './components/Layout';
 import Home from './pages/Home';
 import BlogWithSidebar from './pages/BlogWithSidebar';
 import Contacts from './pages/Contacts';
+import About from './pages/About';
+import OurHistory from './pages/OurHistory';
 
 function App () {
   return (
@@ -14,6 +16,8 @@ function App () {
           <Route />
         </Route>
         <Route path="contacts" element={<Contacts />} />
+        <Route path="about" element={<About />} />
+        <Route path="history" element={<OurHistory />} />
       </Route>
     </Routes>
   );
