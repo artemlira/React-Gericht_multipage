@@ -11,6 +11,7 @@
     font-size: 4rem;
     line-height: f.ratio(64, 83.2);
     color: v.$gold;
+    text-transform: capitalize;
 
     @include m.phone {
       font-size: 2.5rem;
