@@ -54,16 +54,10 @@ const Menu = forwardRef(({ active, setOpenMenu }, ref) => (
           <NavLink to="/" className={setActive}>Home</NavLink>
         </li>
         <li className={styles.navItem}>
-          <a href="#" className={styles.navLink}>Pages</a>
-        </li>
-        <li className={styles.navItem}>
           <NavLink to="contacts" className={setActive}>Contact Us</NavLink>
         </li>
         <li className={styles.navItem}>
-          <a href="#" className={styles.navLink}>Blog</a>
-        </li>
-        <li className={styles.navItem}>
-          <a href="#" className={styles.navLink}>Landing</a>
+          <NavLink to="blog" className={styles.navLink}>Blog</NavLink>
         </li>
       </ul>
     </nav>

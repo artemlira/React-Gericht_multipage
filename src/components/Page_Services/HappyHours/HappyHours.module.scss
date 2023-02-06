@@ -1,0 +1,40 @@
+@use '../../../styles/variables.scss' as v;
+@use '../../../styles/mixins.scss' as m;
+@use '../../../styles/functions.scss' as f;
+
+.happyHours {
+  position: relative;
+}
+
+.happyHoursSwiper {
+  max-height: 900px;
+}
+
+.content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+}
+
+.title {
+  font-weight: 600;
+  font-size: 8rem;
+  line-height: f.ratio(128, 166.4);
+  color: v.$gold;
+  text-align: center;
+
+  &:not(:last-child) {
+    margin-bottom: 2rem;
+  }
+}
+
+.text {
+  text-align: center;
+  font-family: v.$Cormorant;
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: f.ratio(32, 41.6);
+  color: v.$white;
+}
