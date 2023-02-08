@@ -76,7 +76,7 @@ export default function Blog () {
                 />)}
             </motion.ul>
           </div>
-          <Button text="View More" />
+          <Button text="View More" link="/blog" />
         </div>
       </div>
     </section>

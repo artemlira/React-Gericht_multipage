@@ -57,7 +57,7 @@ const Menu = forwardRef(({ active, setOpenMenu }, ref) => (
           <NavLink to="contacts" className={setActive}>Contact Us</NavLink>
         </li>
         <li className={styles.navItem}>
-          <NavLink to="blog" className={styles.navLink}>Blog</NavLink>
+          <NavLink to="blog" className={setActive}>Blog</NavLink>
         </li>
       </ul>
     </nav>
@@ -80,8 +80,3 @@ Menu.propTypes = {
 Menu.displayName = 'Menu';
 
 const MMenu = motion(Menu);
-
-MMenu.propTypes = {
-  active: PropTypes.bool,
-  setOpenMenu: PropTypes.func.isRequired
-};
