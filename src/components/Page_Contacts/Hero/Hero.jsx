@@ -1,18 +1,20 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import { ReactComponent as Icon1 } from '../../../images/Page-contacts/Hero/icon.svg';
 import styles from './Hero.module.scss';
+import { GerichtContext } from './../../Context';
 
 export default function Hero ({ title, page }) {
+  const { ref } = useContext(GerichtContext);
   return (
-    <section className={styles.hero}>
+    <section ref={ref} className={styles.hero}>
       <div className={styles.container}>
-        <h1 className={styles.title}>{ title}</h1>
+        <h1 className={styles.title}>{title}</h1>
         <div className={styles.wrapperText}>
           <Link to="/" className={styles.text}>Home</Link>
           <Icon1 className={styles.icon} />
-          <p className={styles.text}>{ page}</p>
+          <p className={styles.text}>{page}</p>
         </div>
       </div>
     </section>

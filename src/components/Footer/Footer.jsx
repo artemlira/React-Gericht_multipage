@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import Title from '../Title/Title';
 import logo from '../../images/Hero/iconLogo.svg';
 import { ReactComponent as Icon1 } from '../../images/Footer/icon01.svg';
@@ -6,14 +6,19 @@ import { ReactComponent as Icon2 } from '../../images/Footer/icon02.svg';
 import { ReactComponent as Icon3 } from '../../images/Footer/icon03.svg';
 import Button from './../Button/Button';
 import styles from './Footer.module.scss';
+import { GerichtContext } from './../Context';
 
 export default function Footer () {
+  const { ref } = useContext(GerichtContext);
+  const handleClick = () => {
+    ref.current?.scrollIntoView({ behavior: 'smooth' });
+  };
   return (
     <footer className={styles.footer}>
       <div className="container">
         <div className={styles.container}>
           <div className={styles.bgIcon}></div>
-          <a href="#hero" className={styles.toTop}>Top</a>
+          <a className={styles.toTop} onClick={handleClick}>Top</a>
           <div className={styles.newsletter}>
             <Title className={styles.footerTitle} text="Newsletter" title="Subscribe to Our Newsletter" />
             <div className={styles.newsletterText}>

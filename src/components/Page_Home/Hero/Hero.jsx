@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import Image from 'react-image-webp';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination, Navigation, EffectCreative } from 'swiper';
@@ -6,8 +6,10 @@ import logo from '../../../images/Hero/iconLogo.svg';
 import Button from '../../Button/Button';
 import styles from './Hero.module.scss';
 import 'swiper/css';
+import { GerichtContext } from './../../Context';
 
 export default function Hero () {
+  const { ref } = useContext(GerichtContext);
   const pagination = {
     type: 'fraction',
     clickable: true,
@@ -17,7 +19,7 @@ export default function Hero () {
   };
 
   return (
-    <section id="hero" className={styles.hero}>
+    <section id="hero" ref={ref} className={styles.hero}>
       <div className="container">
         <div className={styles.container}>
           <div className={styles.contant}>
