@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
 import { isWebpSupported } from 'react-image-webp/dist/utils';
 import { Link } from 'react-router-dom';
@@ -7,6 +7,7 @@ import Twitter from '../../../images/icon_twitter.svg';
 import Instagram from '../../../images/icon_instagram.svg';
 import Button from './../../Button/Button';
 import styles from './Main.module.scss';
+import { GerichtContext } from './../../Context';
 
 const cards = [
   {
@@ -48,6 +49,7 @@ const cards = [
 ];
 
 export default function Main () {
+  const { setOpenBlogDetail } = useContext(GerichtContext);
   return (
     <section className={styles.main}>
       <div className="container">
@@ -57,6 +59,8 @@ export default function Main () {
               {cards.map((card, index) =>
                 <BlogCard
                   key={index}
+                  setOpenBlogDetail={setOpenBlogDetail}
+                  card={card}
                   {...card}
                 />)}
             </div>
@@ -101,7 +105,11 @@ export default function Main () {
               <div className={styles.topTitle}>
                 <h4 className={styles.sidebarTitle}>Our Latest Posts</h4>
               </div>
-              <BlogCard {...cards[1]} />
+              <BlogCard
+                setOpenBlogDetail={setOpenBlogDetail}
+                card={cards[1]}
+                {...cards[1]}
+              />
             </div>
             <div className={styles.tags}>
               <div className={styles.tagsTitle}>
@@ -141,7 +149,7 @@ export default function Main () {
   );
 }
 
-const BlogCard = ({ img, imgWebp, title, text, link, data, author }) => (
+const BlogCard = ({ setOpenBlogDetail, card, img, imgWebp, title, text, link, data, author }) => (
   <div className={styles.cardWrapper}>
     <div className={styles.image}>
       {isWebpSupported()
@@ -160,7 +168,7 @@ const BlogCard = ({ img, imgWebp, title, text, link, data, author }) => (
         <p>{text}</p>
       </div>
       <div className={styles.link}>
-        <Link to="/">{link}</Link>
+        <Link onClick={() => setOpenBlogDetail(card)} to="blog_detail">{link}</Link>
       </div>
     </div>
   </div>
@@ -173,5 +181,7 @@ BlogCard.propTypes = {
   text: PropTypes.string.isRequired,
   link: PropTypes.string.isRequired,
   data: PropTypes.string.isRequired,
-  author: PropTypes.string.isRequired
+  author: PropTypes.string.isRequired,
+  card: PropTypes.object.isRequired,
+  setOpenBlogDetail: PropTypes.func.isRequired
 };

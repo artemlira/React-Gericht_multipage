@@ -1,11 +1,16 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import Button from '../../Button/Button';
 import Title from '../../Title/Title';
 import styles from './Reservation.module.scss';
+import { GerichtContext } from './../../Context';
 
 export default function Reservation () {
+  const { reservationRef } = useContext(GerichtContext);
   return (
-    <section id="reservation" className={styles.reservation}>
+    <section
+      ref={reservationRef}
+      // id="reservation"
+      className={styles.reservation}>
       <div className="container">
         <div className={styles.container}>
           <div className={styles.bgIcon}></div>

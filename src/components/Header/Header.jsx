@@ -1,8 +1,9 @@
 import { motion } from 'framer-motion';
-import React, { useState, forwardRef } from 'react';
+import React, { useState, forwardRef, useContext } from 'react';
 import { NavLink, Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import styles from './Header.module.scss';
+import { GerichtContext } from './../Context';
 
 const animation = {
   hidden: {
@@ -23,6 +24,12 @@ const setActive = ({ isActive }) => isActive ? 'active-header' : '';
 
 export default function Header () {
   const [openMenu, setOpenMenu] = useState(false);
+  const { reservationRef } = useContext(GerichtContext);
+  const handleClick = () => {
+    setTimeout(() => {
+      reservationRef.current?.scrollIntoView({ behavior: 'smooth' });
+    }, 0);
+  };
   return (
     <header id="header" className={styles.header}>
       <div className="container">
@@ -35,7 +42,7 @@ export default function Header () {
             <Link to="/">Gerícht</Link>
           </div>
 
-          {!openMenu ? <Menu active={false} setOpenMenu={setOpenMenu} /> : <MMenu active={true} variants={animation} setOpenMenu={setOpenMenu} />}
+          {!openMenu ? <Menu active={false} setOpenMenu={setOpenMenu} handleClick={handleClick} /> : <MMenu active={true} variants={animation} setOpenMenu={setOpenMenu} />}
 
           <div className={styles.burgerMenu} onClick={() => setOpenMenu(!openMenu)}>
             <span className={!openMenu ? `${styles.menuTablet}` : `${styles.menuTablet} ${styles.active}`}></span>
@@ -46,7 +53,7 @@ export default function Header () {
   );
 }
 
-const Menu = forwardRef(({ active, setOpenMenu }, ref) => (
+const Menu = forwardRef(({ active, setOpenMenu, handleClick }, ref) => (
   <div className={!active ? `${styles.navWrapper}` : `${styles.navWrapper} ${styles.active}`} ref={ref}>
     <nav className={!active ? `${styles.nav}` : `${styles.active} ${styles.nav}`}>
       <ul className={styles.navList} onClick={() => setOpenMenu(false)}>
@@ -63,10 +70,10 @@ const Menu = forwardRef(({ active, setOpenMenu }, ref) => (
     </nav>
     <div className={!active ? `${styles.registration}` : `${styles.active} ${styles.registration}`}>
       <div className={styles.logIn}>
-        <a href="#">Log in / registration</a>
+        <Link to="/">Log in / registration</Link>
       </div>
       <div className={styles.table}>
-        <a href="#reservation">book table</a>
+        <Link to="/" onClick={handleClick}>book table</Link>
       </div>
     </div>
   </div>
@@ -74,7 +81,8 @@ const Menu = forwardRef(({ active, setOpenMenu }, ref) => (
 
 Menu.propTypes = {
   active: PropTypes.bool.isRequired,
-  setOpenMenu: PropTypes.func.isRequired
+  setOpenMenu: PropTypes.func.isRequired,
+  handleClick: PropTypes.func.isRequired
 };
 
 Menu.displayName = 'Menu';
