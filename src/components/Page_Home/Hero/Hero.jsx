@@ -46,6 +46,7 @@ export default function Hero () {
               slidesPerView={1} // number of sliders
               pagination={pagination}
               loop={true} // infinity
+              allowTouchMove={false} // No finger swipe
               autoplay={{ delay: 2000, stopOnLastSlide: false, disableOnInteraction: false }}
               speed={1500}>
               <SwiperSlide className={styles.slide}>

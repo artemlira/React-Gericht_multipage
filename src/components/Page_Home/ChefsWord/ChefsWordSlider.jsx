@@ -45,6 +45,7 @@ export default function ChefsWordSlider () {
         creativeEffect={{ prev: { shadow: false, translate: [0, 0, 0] }, next: { translate: ['100%', 0, 0] } }}
         slidesPerView={1}
         loop={true}
+        allowTouchMove={false} // No finger swipe
         autoplay={{ delay: 2000, stopOnLastSlide: false, disableOnInteraction: false }}
         speed={1500}
         className="chefsWordSlider">
