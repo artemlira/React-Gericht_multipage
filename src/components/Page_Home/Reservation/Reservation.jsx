@@ -7,10 +7,7 @@ import { GerichtContext } from './../../Context';
 export default function Reservation () {
   const { reservationRef } = useContext(GerichtContext);
   return (
-    <section
-      ref={reservationRef}
-      // id="reservation"
-      className={styles.reservation}>
+    <section ref={reservationRef} className={styles.reservation}>
       <div className="container">
         <div className={styles.container}>
           <div className={styles.bgIcon}></div>
