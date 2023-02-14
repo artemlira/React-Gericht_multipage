@@ -58,11 +58,17 @@
 }
 
 .chefsSlider {
-  border: 5px solid tomato;
   max-height: 100%;
 
   @include m.netbook {
     max-height: 74vw;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
   }
 }
 

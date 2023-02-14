@@ -4,7 +4,6 @@
 
 .Chefs_image__KaiAG {
   .swiper {
-    border: 5px solid blue;
 
     @include m.netbook {
       max-height: 74vw;
@@ -14,11 +13,11 @@
   .swiper-slide {
     transform: translateX(0);
 
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center;
-    }
+    // img {
+    //   width: 100%;
+    //   height: 100%;
+    //   object-fit: cover;
+    //   object-position: center;
+    // }
   }
 }
