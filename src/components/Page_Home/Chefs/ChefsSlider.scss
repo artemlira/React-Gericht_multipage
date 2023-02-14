@@ -4,6 +4,7 @@
 
 .Chefs_image__KaiAG {
   .swiper {
+    border: 5px solid blue;
 
     @include m.netbook {
       max-height: 74vw;

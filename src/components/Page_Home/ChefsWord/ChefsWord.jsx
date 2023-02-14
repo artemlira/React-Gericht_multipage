@@ -61,9 +61,7 @@ export default function ChefsWord () {
           whileInView="visible"
           viewport={{ amount: 0.2, once: true }}
           className={styles.container}>
-          <motion.div
-            variants={animationRight}
-            className={styles.image}>
+          <motion.div variants={animationRight} className={styles.image}>
             <ChefsWordSlider />
           </motion.div>
           <motion.div variants={animationLeft} className={styles.contant}>

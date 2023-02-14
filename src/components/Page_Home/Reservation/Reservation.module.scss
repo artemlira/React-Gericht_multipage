@@ -95,6 +95,11 @@
   position: absolute;
 }
 
+.date::-webkit-inner-spin-button,
+.time::-webkit-inner-spin-button {
+  display: none;
+}
+
 .text::placeholder,
 .date::placeholder,
 .time::placeholder {
