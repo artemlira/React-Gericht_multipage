@@ -6,9 +6,9 @@
   .swiper {
     border: 5px solid blue;
 
-    @include m.netbook {
-      max-height: 74vw;
-    }
+    // @include m.netbook {
+    //   max-height: 74vw;
+    // }
   }
 
   .swiper-slide {

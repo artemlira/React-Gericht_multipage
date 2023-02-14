@@ -60,6 +60,10 @@
 .chefsSlider {
   border: 5px solid tomato;
   max-height: 100%;
+
+  @include m.netbook {
+    max-height: 74vw;
+  }
 }
 
 .contant {
