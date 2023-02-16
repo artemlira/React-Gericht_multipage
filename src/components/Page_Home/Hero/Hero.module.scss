@@ -69,7 +69,7 @@
 .title {
   font-family: v.$Cormorant;
   font-weight: 700;
-  font-size:5.625rem;
+  font-size: 5.625rem;
   line-height: f.ratio(90, 113);
   color: v.$gold;
   letter-spacing: 0.04em;
@@ -96,66 +96,22 @@
   letter-spacing: 0.04em;
 
   &:not(:last-child) {
-    margin-bottom:2rem;
+    margin-bottom: 2rem;
   }
 }
 
-.slider {
-  max-height: 46rem + 5.75rem;
-  position: relative;
-  padding-bottom: 5.75rem !important;
 
-  @include m.tablet {
-    width: 80vw;
-    max-height: 100vw;
-  }
+// .sliderWrapper {
+//   flex: 0 1 50%;
+//   display: grid;
+//   align-items: center;
+//   justify-content: start;
+//   position: relative;
 
-  &::after,
-  &::before {
-    content: '';
-    width: 68%;
-    height: 55%;
-    background: v.$gold;
-    position: absolute;
-    z-index: 0;
-  }
-
-  &::after {
-    right: 0;
-    top: 0;
-    z-index: -1;
-  }
-
-  &::before {
-    left: 0;
-    bottom: 5.625rem;
-  }
-}
-
-.slide {
-  max-width: 38.6875rem;
-  padding: 1.5rem;
-  position: relative;
-  transform: translateX(0.625rem);
-
-  img {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-  }
-}
-
-.sliderWrapper {
-  flex: 0 1 50%;
-  display: grid;
-  align-items: center;
-  justify-content: start;
-  position: relative;
-
-  @include m.netbook {
-    place-content: center;
-  }
-}
+//   @include m.netbook {
+//     place-content: center;
+//   }
+// }
 
 .scroll {
   position: absolute;

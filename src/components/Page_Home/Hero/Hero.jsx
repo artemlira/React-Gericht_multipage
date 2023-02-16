@@ -2,11 +2,64 @@ import React, { useContext } from 'react';
 import Image from 'react-image-webp';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination, Navigation, EffectCreative } from 'swiper';
+import styled from 'styled-components';
 import logo from '../../../images/Hero/iconLogo.svg';
 import Button from '../../Button/Button';
 import styles from './Hero.module.scss';
 import 'swiper/css';
 import { GerichtContext } from './../../Context';
+
+const Wrapper = styled.div`
+  flex: 0 1 50%;
+  display: grid;
+  align-items: center;
+  justify-content: start;
+  position: relative;
+
+   @media screen and (max-width:992px) {
+    place-content: center;
+   }
+
+  .hero__slider{
+    max-height: 51.75rem;
+    position: relative;
+    padding-bottom: 5.75rem;
+
+    &::after,
+    &::before {
+      content: '';
+      width: 68%;
+      height: 55%;
+      background: #dcca87;
+      position: absolute;
+      z-index: 0;
+    }
+
+    &::after {
+      right: 0;
+      top: 0;
+      z-index: -1;
+    }
+
+    &::before {
+      left: 0;
+      bottom: 5.625rem;
+    }
+  }
+
+  .hero__slide{
+    max-width: 38.6875rem;
+    padding: 1.5rem;
+    position: relative;
+    transform: translateX(0.625rem);
+
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+`;
 
 export default function Hero () {
   const { ref } = useContext(GerichtContext);
@@ -31,11 +84,11 @@ export default function Hero () {
             <p className={styles.text}>Sit tellus lobortis sed senectus vivamus molestie. Condimentum volutpat morbi facilisis quam scelerisque sapien. Et, penatibus aliquam amet tellus </p>
             <Button text="Explore Menu" anchor="/#today" />
           </div>
-          <div className={styles.sliderWrapper}>
+          <Wrapper>
             <Swiper
-              className={styles.slider}
+              className="hero__slider"
               direction={'vertical'}
-              centeredSlides={true}
+              // centeredSlides={true}
               modules={[Pagination, EffectCreative, Autoplay, Navigation]}
               effect={'creative'}
               creativeEffect={{
@@ -49,18 +102,18 @@ export default function Hero () {
               allowTouchMove={false} // No finger swipe
               autoplay={{ delay: 2000, stopOnLastSlide: false, disableOnInteraction: false }}
               speed={1500}>
-              <SwiperSlide className={styles.slide}>
+              <SwiperSlide className="hero__slide">
                 <Image src={require('../../../images/Hero/slide1.jpg')} webp={require('../../../images/Hero/slide1.webp')} alt="slide1" />
               </SwiperSlide>
-              <SwiperSlide className={styles.slide}>
+              <SwiperSlide className="hero__slide">
                 <Image src={require('../../../images/Hero/slide2.jpg')} webp={require('../../../images/Hero/slide2.webp')} alt="slide2" />
               </SwiperSlide>
-              <SwiperSlide className={styles.slide}>
+              <SwiperSlide className="hero__slide">
                 <Image src={require('../../../images/Hero/slide3.jpg')} webp={require('../../../images/Hero/slide3.webp')} alt="slide3" />
               </SwiperSlide>
             </Swiper>
             <span className={styles.scroll}>Scroll</span>
-          </div>
+          </Wrapper>
         </div>
       </div>
     </section >
