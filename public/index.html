@@ -38,6 +38,16 @@
 </style>
 
 <body>
+  <form name="reservation" netlify netlify-honeypot="bot-field" hidden>
+    <select name="persons">
+      <option value="1">1 person</option>
+      <option value="2">2 person</option>
+      <option value="3">3 person</option>
+      <option value="4">4 person</option>
+    </select>
+    <input type="text" name="date" />
+    <input type="text" name="time" />
+  </form>
   <noscript>You need to enable JavaScript to run this app.</noscript>
   <div id="root"></div>
   <!--
