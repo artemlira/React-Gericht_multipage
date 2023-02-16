@@ -25,6 +25,11 @@ const Wrapper = styled.div`
     position: relative;
     padding-bottom: 5.75rem;
 
+     @media screen and (max-width:768px) {
+      width: 80vw;
+      max-height: 100vw;
+     }
+
     &::after,
     &::before {
       content: '';
