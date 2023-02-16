@@ -130,3 +130,22 @@ html {
     display: none;
   }
 }
+
+.btn__submit {
+  background: v.$gold;
+  cursor: pointer;
+  transition: background-color, 0.5s;
+  // display: grid;
+  // place-content: center;
+  font-family: v.$Cormorant;
+  font-weight: 700;
+  line-height: f.ratio(16, 28);
+  letter-spacing: 0.04em;
+  color: v.$black;
+  display: block;
+  padding: 0.5rem 2rem;
+
+  &:hover {
+    background: #e2c768b4;
+  }
+}

@@ -4,7 +4,7 @@ import logo from '../../images/Hero/iconLogo.svg';
 import { ReactComponent as Icon1 } from '../../images/Footer/icon01.svg';
 import { ReactComponent as Icon2 } from '../../images/Footer/icon02.svg';
 import { ReactComponent as Icon3 } from '../../images/Footer/icon03.svg';
-import Button from './../Button/Button';
+// import Button from './../Button/Button';
 import styles from './Footer.module.scss';
 import { GerichtContext } from './../Context';
 
@@ -13,6 +13,20 @@ export default function Footer () {
   const handleClick = () => {
     ref.current?.scrollIntoView({ behavior: 'smooth' });
   };
+
+  // const style = {
+  //   background: '#DCCA87',
+  //   cursor: 'pointer',
+  //   transition: 'backgroundColor, 0.5s',
+  //   display: 'grid',
+  //   placeContent: 'center',
+  //   fontFamily: 'Cormorant Upright',
+  //   fontWeight: '700',
+  //   lineHeight: '130%',
+  //   letterSpacing: '0.04em',
+  //   color: '#0c0c0c',
+  //   padding: '0.5rem 2rem'
+  // };
   return (
     <footer className={styles.footer}>
       <div className="container">
@@ -27,7 +41,7 @@ export default function Footer () {
             <form className={styles.subscribe} name="subscribe" data-netlify="true" method="POST">
               <input type="hidden" name="form-name" value="subscribe" />
               <input type="text" name="email" placeholder="Email Address" className={styles.subscribeInput} />
-              <Button type="submit" className={styles.footerBtn} text="Subscribe" />
+              <button type="submit" className="btn__submit">Subscribe</button>
             </form>
           </div>
           <div className={styles.content}>

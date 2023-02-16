@@ -1,5 +1,5 @@
 import React, { useContext, useRef } from 'react';
-import Button from '../../Button/Button';
+// import Button from '../../Button/Button';
 import Title from '../../Title/Title';
 import styles from './Reservation.module.scss';
 import { GerichtContext } from './../../Context';
@@ -45,8 +45,8 @@ export default function Reservation () {
                   onFocus={() => changeType(timeRef, 'time')}
                   placeholder="11:00 AM" />
               </div>
-              <Button type="submit" text="Book Now" />
-              {/* <button type="submit">Send me</button> */}
+              {/* <Button type="submit" text="Book Now" /> */}
+              <button className="btn__submit" type="submit">Book Now</button>
             </form>
           </div>
           {/* <Button text="Book Now" /> */}
