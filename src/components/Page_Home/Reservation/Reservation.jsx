@@ -11,6 +11,7 @@ export default function Reservation () {
   const changeType = (ref, type) => {
     ref.current.type = type;
   };
+
   return (
     <section ref={reservationRef} className={styles.reservation}>
       <div className="container">
@@ -18,11 +19,13 @@ export default function Reservation () {
           <div className={styles.bgIcon}></div>
           <Title text="Reservations" title="Book A Table" />
           <div className={styles.dialogBox}>
-            <form className={styles.dialogForm} action="/">
-              <input
-                className={styles.text}
-                type="text"
-                placeholder="1 person" />
+            <form className={styles.dialogForm} name="Reservation" action="/" data-netlify="true" method="POST">
+              <select className={styles.text} name="" id="">
+                <option value="1">1 person</option>
+                <option value="2">2 person</option>
+                <option value="3">3 person</option>
+                <option value="4">4 person</option>
+              </select>
               <input
                 ref={dateRef}
                 className={styles.date}
@@ -37,9 +40,10 @@ export default function Reservation () {
                 type="text"
                 onFocus={() => changeType(timeRef, 'time')}
                 placeholder="11:00 AM" />
+              <Button type="submit" text="Book Now" />
             </form>
           </div>
-          <Button text="Book Now" />
+          {/* <Button type="submit" text="Book Now" /> */}
         </div>
       </div>
     </section>
