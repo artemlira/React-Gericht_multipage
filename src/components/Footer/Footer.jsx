@@ -24,10 +24,11 @@ export default function Footer () {
             <div className={styles.newsletterText}>
               <p>And never miss latest Updates!</p>
             </div>
-            <div className={styles.subscribe}>
-              <input type="text" placeholder="Email Address" className={styles.subscribeInput} />
-              <Button className={styles.footerBtn} text="Subscribe" />
-            </div>
+            <form className={styles.subscribe} name="subscribe" data-netlify="true" method="POST">
+              <input type="hidden" name="form-name" value="subscribe" />
+              <input type="text" name="email" placeholder="Email Address" className={styles.subscribeInput} />
+              <Button type="submit" className={styles.footerBtn} text="Subscribe" />
+            </form>
           </div>
           <div className={styles.content}>
             <div className={styles.contacts}>
