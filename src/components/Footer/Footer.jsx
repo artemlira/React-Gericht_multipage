@@ -13,20 +13,6 @@ export default function Footer () {
   const handleClick = () => {
     ref.current?.scrollIntoView({ behavior: 'smooth' });
   };
-
-  // const style = {
-  //   background: '#DCCA87',
-  //   cursor: 'pointer',
-  //   transition: 'backgroundColor, 0.5s',
-  //   display: 'grid',
-  //   placeContent: 'center',
-  //   fontFamily: 'Cormorant Upright',
-  //   fontWeight: '700',
-  //   lineHeight: '130%',
-  //   letterSpacing: '0.04em',
-  //   color: '#0c0c0c',
-  //   padding: '0.5rem 2rem'
-  // };
   return (
     <footer className={styles.footer}>
       <div className="container">
