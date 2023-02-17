@@ -4,7 +4,6 @@ import logo from '../../images/Hero/iconLogo.svg';
 import { ReactComponent as Icon1 } from '../../images/Footer/icon01.svg';
 import { ReactComponent as Icon2 } from '../../images/Footer/icon02.svg';
 import { ReactComponent as Icon3 } from '../../images/Footer/icon03.svg';
-// import Button from './../Button/Button';
 import styles from './Footer.module.scss';
 import { GerichtContext } from './../Context';
 
@@ -26,7 +25,7 @@ export default function Footer () {
             </div>
             <form className={styles.subscribe} name="subscribe" data-netlify="true" method="POST">
               <input type="hidden" name="form-name" value="subscribe" />
-              <input type="text" name="email" placeholder="Email Address" className={styles.subscribeInput} />
+              <input type="text" name="email" placeholder="Email Address" className={styles.subscribeInput} required />
               <button type="submit" className="btn__submit">Subscribe</button>
             </form>
           </div>

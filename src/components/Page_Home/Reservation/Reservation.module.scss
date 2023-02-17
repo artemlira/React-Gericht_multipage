@@ -64,6 +64,10 @@
   column-gap: 2rem;
   grid-template-columns: repeat(3, 1fr);
 
+  &:not(:last-child) {
+    margin-bottom: 64px;
+  }
+
   @include m.netbook {
     grid-template-columns: 1fr;
     grid-template-rows: repeat(3, 1fr);
@@ -85,6 +89,9 @@
   font-weight: 600;
   padding-inline: 1rem;
   position: relative;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none
 }
 
 .date::-webkit-calendar-picker-indicator,
