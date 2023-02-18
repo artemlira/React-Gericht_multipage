@@ -92,12 +92,37 @@
 }
 
 .link {
-  a {
+
+  a,
+  p {
     font-family: v.$Cormorant;
     font-weight: 700;
     font-size: 1rem;
     line-height: f.ratio(16, 28);
     color: v.$gold;
+    position: relative;
+
+    &::after {
+      display: block;
+      content: '';
+      height: 0.0625rem;
+      width: 0;
+      background-color: v.$gold;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      transition: all 0.3s;
+    }
+
+    &:hover::after {
+      width: 100%;
+    }
+  }
+
+  p {
+    &:hover::after {
+      width: 0;
+    }
   }
 }
 

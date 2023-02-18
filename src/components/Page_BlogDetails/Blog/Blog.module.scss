@@ -2,6 +2,53 @@
 @use '../../../styles/mixins.scss' as m;
 @use '../../../styles/functions.scss' as f;
 
-.blog {}
+.blog {
+  background: v.$black;
+}
 
-.container {}
+.container {
+  margin-block: 152px;
+  @include m.adaptiv-value('margin-inline', 190, 0, 1);
+  display: flex;
+  flex-direction: column;
+  row-gap: 40px;
+}
+
+.publication {
+  display: flex;
+  justify-content: space-between;
+
+  &:not(:last-child) {
+    margin-bottom: 24px;
+  }
+}
+
+.title {
+  font-size: 64px;
+  line-height: f.ratio(64, 83.2);
+  text-transform: capitalize;
+
+  &:not(:last-child) {
+    margin-bottom: 40px;
+  }
+}
+
+.image {
+  height: 430px;
+  width: 100%;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+}
+
+.blogSidebar {
+  display: grid;
+  grid-template-columns: 1fr 0.44fr;
+  column-gap: 69px;
+}
+
+// .content {}

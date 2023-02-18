@@ -1,10 +1,12 @@
-import React, { forwardRef } from 'react';
+import React, { forwardRef, useContext } from 'react';
 import { motion } from 'framer-motion';
 import { isWebpSupported } from 'react-image-webp/dist/utils';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 import Title from '../../Title/Title';
 import Button from '../../Button/Button';
 import styles from './Blog.module.scss';
+import { GerichtContext } from './../../Context';
 
 const animation = {
   hidden: {
@@ -49,6 +51,7 @@ const contentCards = [
 ];
 
 export default function Blog () {
+  const { setOpenBlogDetail } = useContext(GerichtContext);
   return (
     <section className={styles.blog}>
       <div className="container">
@@ -73,6 +76,8 @@ export default function Blog () {
                   title={el.title}
                   text={el.text}
                   link={el.link}
+                  card={el}
+                  setOpenBlogDetail={setOpenBlogDetail}
                 />)}
             </motion.ul>
           </div>
@@ -83,7 +88,7 @@ export default function Blog () {
   );
 }
 
-const CardItem = forwardRef(({ title, text, img, imgWebp, data, author, link }, ref) => (
+const CardItem = forwardRef(({ title, text, img, imgWebp, data, author, link, card, setOpenBlogDetail }, ref) => (
   <li className={styles.cardItem} ref={ref}>
     <div className={styles.itemImg}>
       {isWebpSupported()
@@ -102,7 +107,11 @@ const CardItem = forwardRef(({ title, text, img, imgWebp, data, author, link }, 
         <p>{text}</p>
       </div>
       <div className={styles.itemLink}>
-        <a href="/">{link}</a>
+        <Link
+          onClick={() => setOpenBlogDetail(card)}
+          to="blog/blog_detail"
+        >{link}
+        </Link>
       </div>
     </div>
   </li>
@@ -117,7 +126,9 @@ CardItem.propTypes = {
   imgWebp: PropTypes.string.isRequired,
   data: PropTypes.string.isRequired,
   author: PropTypes.string.isRequired,
-  link: PropTypes.string.isRequired
+  link: PropTypes.string.isRequired,
+  card: PropTypes.object.isRequired,
+  setOpenBlogDetail: PropTypes.func.isRequired
 };
 
 const MCardItem = motion(CardItem);
