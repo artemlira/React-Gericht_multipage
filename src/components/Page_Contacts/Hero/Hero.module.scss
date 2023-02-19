@@ -39,6 +39,10 @@
   gap: 0.5rem;
   align-items: center;
   justify-content: center;
+
+  @include m.netbook {
+    flex-wrap: wrap;
+  }
 }
 
 .text {

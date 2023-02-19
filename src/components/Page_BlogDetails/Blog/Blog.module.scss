@@ -12,6 +12,10 @@
   display: flex;
   flex-direction: column;
   row-gap: 2.5rem;
+
+  @media screen and (max-width:1260px) {
+    margin-inline: 0;
+  }
 }
 
 .publication {
@@ -28,6 +32,11 @@
   line-height: f.ratio(64, 83.2);
   text-transform: capitalize;
 
+  @include m.phone {
+    font-size: 2.625rem;
+    line-height: f.ratio(42, 61.2);
+  }
+
   &:not(:last-child) {
     margin-bottom: 2.5rem;
   }
@@ -37,6 +46,14 @@
   height: f.vw(430, 1920);
   max-height: 26.875rem;
   width: 100%;
+
+  @include m.laptop {
+    height: f.vw(430, 1260);
+  }
+
+  @include m.phone {
+    height: f.vw(430, 768);
+  }
 
   img {
     width: 100%;
@@ -50,6 +67,11 @@
   display: grid;
   grid-template-columns: 1fr 0.44fr;
   column-gap: 4.3125rem;
+
+  @include m.tablet {
+    grid-template-columns: 1fr;
+    row-gap: 4.3125rem;
+  }
 }
 
 .content,
@@ -88,6 +110,7 @@
 .ICItem {
   position: relative;
   transform: translateX(1.5rem);
+  margin-right: 1.5rem;
 
   &::before {
     content: '';
@@ -109,6 +132,14 @@
   background-blend-mode: overlay;
   display: grid;
   place-items: center;
+
+  @include m.laptop {
+    height: f.vw(346, 1260);
+  }
+
+  @include m.tablet {
+    height: 21.625rem;
+  }
 }
 
 .play {
@@ -145,12 +176,25 @@
   line-height: f.ratio(32, 41.6);
   color: v.$white;
   font-weight: 400;
+  text-transform: capitalize;
+  border: 0.0625rem solid v.$gold;
+
+  @include m.phone {
+    background: url('../../../images/Blog_Details/bg1.png') left 6px top -4px / 33px 25px no-repeat,
+      url('../../../images/Blog_Details/bg2.png') right 6px bottom -4px / 33px 25px no-repeat, #545454;
+  }
 }
 
 .textImageWrapper {
   display: grid;
   grid-template-columns: 1fr 0.58fr;
   column-gap: 2rem;
+
+  @include m.netbook {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr minmax(auto, 325px);
+    row-gap: 2rem;
+  }
 }
 
 .imageContent {
@@ -179,6 +223,10 @@
 .action {
   display: flex;
   column-gap: 1rem;
+
+  @include m.netbook {
+    flex-wrap: wrap;
+  }
 }
 
 .actions {
