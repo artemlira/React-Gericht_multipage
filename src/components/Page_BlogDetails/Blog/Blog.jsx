@@ -13,6 +13,7 @@ export default function Blog () {
     <section className={styles.blog}>
       <div className="container">
         <div className={styles.container}>
+          <div className={styles.bgIcon}></div>
           <div className="imageTitle">
             <div className={styles.publication}>
               <p className={styles.data}>{openBlogDetail?.data}</p>

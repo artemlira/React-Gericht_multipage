@@ -54,6 +54,7 @@ export default function Main () {
     <section className={styles.main}>
       <div className="container">
         <div className={styles.container}>
+          <div className={styles.bgIcon}></div>
           <section className={styles.blogs}>
             <div className={styles.cards}>
               {cards.map((card, index) =>
