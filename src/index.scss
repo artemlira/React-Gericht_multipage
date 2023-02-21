@@ -74,15 +74,8 @@ html {
   flex: 1 0 auto;
 }
 
-.hidden {
-  html {
-    position: sticky;
-    margin: 0 auto;
-    /*overflow:hidden; - не нужно использовать*/
-    height: 100vh;
-    width: 100%;
-    top: 0;
-  }
+.main .hidden {
+  overflow: hidden;
 }
 
 .container {
