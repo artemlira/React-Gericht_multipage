@@ -62,7 +62,7 @@ export default function Blog () {
             <motion.ul
               initial="hidden"
               whileInView="visible"
-              viewport={{ amount: 0.1, once: true }}
+              viewport={{ amount: 0, once: true }}
               className={styles.cardsList}>
               {contentCards.map((el, index) =>
                 <MCardItem

@@ -25,6 +25,7 @@ export default function Comments () {
     <section className={styles.comments}>
       <div className="container">
         <div className={styles.container}>
+          <div className={styles.bgIcon}></div>
           <div className={styles.title}>
             <h4>Comment({Comm.length})</h4>
           </div>

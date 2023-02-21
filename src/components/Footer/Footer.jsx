@@ -8,12 +8,12 @@ import styles from './Footer.module.scss';
 import { GerichtContext } from './../Context';
 
 export default function Footer () {
-  const { ref } = useContext(GerichtContext);
+  const { ref, setOpenMenu } = useContext(GerichtContext);
   const handleClick = () => {
     ref.current?.scrollIntoView({ behavior: 'smooth' });
   };
   return (
-    <footer className={styles.footer}>
+    <footer className={styles.footer} onClick={() => setOpenMenu(false)}>
       <div className="container">
         <div className={styles.container}>
           <div className={styles.bgIcon}></div>

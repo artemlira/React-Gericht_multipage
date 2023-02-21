@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import React, { useState, forwardRef, useContext } from 'react';
+import React, { forwardRef, useContext } from 'react';
 import { NavLink, Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import styles from './Header.module.scss';
@@ -13,7 +13,7 @@ const animation = {
   visible: {
     x: 0,
     scale: 1,
-    transition: { duration: 1 }
+    transition: { duration: 0.4 }
   },
   exit: {
     x: '100%'
@@ -23,8 +23,7 @@ const animation = {
 const setActive = ({ isActive }) => isActive ? 'active-header' : '';
 
 export default function Header () {
-  const [openMenu, setOpenMenu] = useState(false);
-  const { reservationRef } = useContext(GerichtContext);
+  const { reservationRef, setOpenMenu, openMenu } = useContext(GerichtContext);
   const handleClick = () => {
     setTimeout(() => {
       reservationRef.current?.scrollIntoView({ behavior: 'smooth' });
@@ -41,9 +40,11 @@ export default function Header () {
           <div className={styles.logo}>
             <Link to="/">Gerícht</Link>
           </div>
-
-          {!openMenu ? <Menu active={false} setOpenMenu={setOpenMenu} handleClick={handleClick} /> : <MMenu active={true} variants={animation} setOpenMenu={setOpenMenu} />}
-
+          {
+            !openMenu
+              ? <Menu active={false} setOpenMenu={setOpenMenu} handleClick={handleClick} />
+              : <MMenu active={true} variants={animation} setOpenMenu={setOpenMenu} handleClick={handleClick} />
+          }
           <div className={styles.burgerMenu} onClick={() => setOpenMenu(!openMenu)}>
             <span className={!openMenu ? `${styles.menuTablet}` : `${styles.menuTablet} ${styles.active}`}></span>
           </div>
@@ -68,7 +69,7 @@ const Menu = forwardRef(({ active, setOpenMenu, handleClick }, ref) => (
         </li>
       </ul>
     </nav>
-    <div className={!active ? `${styles.registration}` : `${styles.active} ${styles.registration}`}>
+    <div onClick={() => setOpenMenu(false)} className={!active ? `${styles.registration}` : `${styles.active} ${styles.registration}`}>
       <div className={styles.logIn}>
         <Link to="/">Log in / registration</Link>
       </div>

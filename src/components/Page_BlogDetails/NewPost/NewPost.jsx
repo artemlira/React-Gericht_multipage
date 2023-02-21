@@ -2,10 +2,14 @@ import React from 'react';
 import styles from './NewPost.module.scss';
 
 export default function NewPost () {
+  const preventDefault = (e) => {
+    e.preventDefault();
+  };
   return (
     <section className={styles.newPost}>
       <div className="container">
         <div className={styles.container}>
+          <div className={styles.bgIcon}></div>
           <div className={styles.title}>
             <h4>Post a Comment</h4>
           </div>
@@ -18,13 +22,11 @@ export default function NewPost () {
               <input className={styles.lastName} name="lastName" type="text" placeholder="Last Name" />
             </div>
             <div className={styles.agreement}>
-              <label htmlFor="">
-                <input type="checkbox" name="agreement" />
-                <p>Save my name and email in this browser for the next time I comment.</p>
-              </label>
+              <input className={styles.customCheckbox} defaultChecked type="checkbox" id="agreement" name="agreement" value="yes" />
+              <label htmlFor="agreement">Save my name and email in this browser for the next time I comment.</label>
             </div>
             <div className={styles.button}>
-              <button className="btn__submit" type="submit">Submit</button>
+              <button className="btn__submit" type="submit" onClick={preventDefault}>Submit</button>
             </div>
           </form>
         </div>

@@ -9,12 +9,15 @@ const Context = (props) => {
   const reservationRef = useRef(null); // scroll anchor to the reservation section
   const location = useLocation(); // stores location data
   const [openBlogDetail, setOpenBlogDetail] = useState(null); // data to draw the BlogDetail page
+  const [openMenu, setOpenMenu] = useState(false); // burger menu opening status
   const value = {
     ref,
     reservationRef,
     location,
     openBlogDetail,
-    setOpenBlogDetail
+    setOpenBlogDetail,
+    openMenu,
+    setOpenMenu
   };
 
   return (
