@@ -74,10 +74,6 @@ html {
   flex: 1 0 auto;
 }
 
-.main .hidden {
-  overflow: hidden;
-}
-
 .container {
   border: 0.0625rem solid rgba(0, 0, 255, 0);
   max-width: v.$maxWidthContainer + 30px;
@@ -140,8 +136,6 @@ html {
   background: v.$gold;
   cursor: pointer;
   transition: background-color, 0.5s;
-  // display: grid;
-  // place-content: center;
   font-family: v.$Cormorant;
   font-weight: 700;
   line-height: f.ratio(16, 28);
