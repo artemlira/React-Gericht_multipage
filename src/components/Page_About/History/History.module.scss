@@ -7,6 +7,7 @@
 }
 
 .container {
+  overflow: clip;
   @include m.adaptiv-value('margin-inline', 190, -190, 1);
   margin-block: 9.5rem 9.3125rem;
 

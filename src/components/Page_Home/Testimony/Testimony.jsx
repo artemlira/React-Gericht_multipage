@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { motion } from 'framer-motion';
 import { isWebpSupported } from 'react-image-webp/dist/utils';
 import Title from '../../Title/Title';
+import { testimonyBD } from '../../TextsDB';
 import styles from './Testimony.module.scss';
 
 const animation = {
@@ -17,37 +18,6 @@ const animation = {
   })
 };
 
-const testimonyBD = [
-  {
-    photo: '../../../images/Testimony/01.jpg',
-    photoWebp: '../../../images/Testimony/01.webp',
-    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing sit. auctor sit iaculis in arcu. Vulputate nulla lobortis mauris eget sit. Nulla scelerisque scelerisque congue.',
-    author: 'Wade Warren',
-    position: 'Sommelier'
-  },
-  {
-    photo: '../../../images/Testimony/02.jpg',
-    photoWebp: '../../../images/Testimony/02.webp',
-    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing sit. auctor sit iaculis in arcu. Vulputate nulla lobortis mauris eget sit. Nulla scelerisque scelerisque congue.',
-    author: 'Jane Cooper',
-    position: 'Chef'
-  },
-  {
-    photo: '../../../images/Testimony/03.jpg',
-    photoWebp: '../../../images/Testimony/03.webp',
-    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing sit. auctor sit iaculis in arcu. Vulputate nulla lobortis mauris eget sit. Nulla scelerisque scelerisque congue.',
-    author: 'Robert Fox',
-    position: 'Chef'
-  },
-  {
-    photo: '../../../images/Testimony/04.jpg',
-    photoWebp: '../../../images/Testimony/04.webp',
-    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing sit. auctor sit iaculis in arcu. Vulputate nulla lobortis mauris eget sit. Nulla scelerisque scelerisque congue.',
-    author: 'Brooklyn Simmons',
-    position: 'Caterer'
-  }
-];
-
 export default function Testimony () {
   return (
     <section className={styles.testimony}>
@@ -59,7 +29,7 @@ export default function Testimony () {
             <motion.ul
               initial="hidden"
               whileInView="visible"
-              viewport={{ amount: 0.2, once: true }}
+              viewport={{ amount: 0.05, once: true }}
               className={styles.contantList}>
               {testimonyBD.map((el, i) =>
                 <MTestimonyItem

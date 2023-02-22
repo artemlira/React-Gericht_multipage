@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { motion } from 'framer-motion';
 import Title from '../../Title/Title';
+import { awards } from '../../TextsDB';
 import ChefsWordSlider from './ChefsWordSlider';
 import styles from './ChefsWord.module.scss';
 
@@ -28,29 +29,6 @@ const animationRight = {
     transition: { transform: 0.8 }
   }
 };
-
-const awards = [
-  {
-    title: 'Bib Gourmond',
-    text: 'Lorem ipsum dolor sit amet, consectetur.',
-    icon: '../../../images/ChefsWord/icon2.png'
-  },
-  {
-    title: 'Rising Star',
-    text: 'Lorem ipsum dolor sit amet, consectetur.',
-    icon: '../../../images/ChefsWord/icon1.png'
-  },
-  {
-    title: 'AA Hospitality ',
-    text: 'Lorem ipsum dolor sit amet, consectetur.',
-    icon: '../../../images/ChefsWord/icon5.png'
-  },
-  {
-    title: 'Outstanding Chef',
-    text: 'Lorem ipsum dolor sit amet, consectetur.',
-    icon: '../../../images/ChefsWord/icon3.png'
-  }
-];
 
 export default function ChefsWord () {
   return (

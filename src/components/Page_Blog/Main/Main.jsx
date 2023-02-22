@@ -5,48 +5,10 @@ import { Link } from 'react-router-dom';
 import Facebook from '../../../images/icon_facebook.svg';
 import Twitter from '../../../images/icon_twitter.svg';
 import Instagram from '../../../images/icon_instagram.svg';
+import { cards } from '../../TextsDB';
 import Button from './../../Button/Button';
 import styles from './Main.module.scss';
 import { GerichtContext } from './../../Context';
-
-const cards = [
-  {
-    img: '../../../images/Page_Blog/main/01.jpg',
-    imgWebp: '../../../images/Page_Blog/main/01.webp',
-    title: 'tips for prepping and caring for your grill',
-    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Volutpat mattis ipsum turpis elit elit scelerisque egestas mus in.',
-    data: '16 Apr 2021',
-    author: '- Annalisa L',
-    link: 'Read More'
-  },
-  {
-    img: '../../../images/Page_Blog/main/02.jpg',
-    imgWebp: '../../../images/Page_Blog/main/02.webp',
-    title: 'summer cocktails and mocktails',
-    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Volutpat mattis ipsum turpis elit elit scelerisque egestas mus in.',
-    data: '23 May 2021',
-    author: '-John Micheal',
-    link: 'Read More'
-  },
-  {
-    img: '../../../images/Page_Blog/main/03.jpg',
-    imgWebp: '../../../images/Page_Blog/main/03.webp',
-    title: 'How to make your food Photographs look aesthetic',
-    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Volutpat mattis ipsum turpis elit elit scelerisque egestas mus in.',
-    data: '06 Mar 2020',
-    author: '- Andrial M',
-    link: 'Read More'
-  },
-  {
-    img: '../../../images/Page_Blog/main/04.jpg',
-    imgWebp: '../../../images/Page_Blog/main/04.webp',
-    title: 'Co-ordination & Teamwork Tips from a sous chef',
-    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Volutpat mattis ipsum turpis elit elit scelerisque egestas mus in.',
-    data: '17 June 2018',
-    author: '-Kaityln B',
-    link: 'Read More'
-  }
-];
 
 export default function Main () {
   const { setOpenBlogDetail, location } = useContext(GerichtContext);
