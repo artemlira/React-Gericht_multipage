@@ -1,3 +1,14 @@
+# Gericht
+A multi-page responsive restaurant website with lots of beautiful animations and sliders. The application was written using the React framework, which used: useEffect, useState, useContext, Router Dom v.6, Swiper, Framer-motion, Styled-components, and more. 
+## Link: https://react-gericht-multipage.netlify.app
+## Skills: 
+- React
+- JavaScript
+- SCSS
+- HTML
+- CSS
+- Swiperslider
+- Framer-motion
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
