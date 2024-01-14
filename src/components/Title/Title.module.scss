@@ -8,25 +8,25 @@
   h2 {
     font-family: v.$Cormorant;
     font-weight: 600;
-    font-size: 4rem;
+    font-size: 64px;
     line-height: f.ratio(64, 83.2);
     color: v.$gold;
     text-transform: capitalize;
 
     @include m.phone {
-      font-size: 2.5rem;
+      font-size: 40px;
       line-height: f.ratio(40, 63.2);
     }
   }
 
   &:not(:last-child) {
-    margin-bottom: 4rem;
+    margin-bottom: 64px;
   }
 
   p {
     font-family: v.$Cormorant;
     font-weight: 700;
-    font-size: 1.4375rem;
+    font-size: 23px;
     line-height: f.ratio(23, 29.9);
     color: v.$white;
     letter-spacing: 0.04em;
@@ -38,12 +38,12 @@
   }
 
   div {
-    width: 2.5rem;
-    height: 0.625rem;
+    width: 40px;
+    height: 10px;
     margin-inline: auto;
 
     &:not(:last-child) {
-      margin-bottom: 0.5rem;
+      margin-bottom: 8px;
     }
 
     img {

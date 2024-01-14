@@ -3,43 +3,43 @@
 @use '../../../styles/functions.scss' as f;
 
 .photoGallery {
-  background: url('../../../images/line1.png') right -576.25rem no-repeat, url('../../../images/line2.png') left -576.25rem no-repeat, url('../../../images/ChefsWord/BG.jpg')center / cover no-repeat;
+  background: url('../../../images/line1.png') right -9220px no-repeat, url('../../../images/line2.png') left -9220px no-repeat, url('../../../images/ChefsWord/BG.jpg')center / cover no-repeat;
   overflow: clip;
 }
 
 .container {
-  margin-block: 8rem;
+  margin-block: 128px;
   display: flex;
-  gap: 4rem;
+  gap: 64px;
   position: relative;
   right: 0;
   @include m.adaptiv-value('left', 190, -190, 1);
 
   @include m.laptop {
-    margin-block:6.25rem;
+    margin-block:100px;
     flex-direction: column;
     left: 0;
     align-items: center;
   }
 
   @include m.phone {
-    margin-block: 1.25rem;
+    margin-block: 20px;
   }
 }
 
 .content {
-  flex: 0 0 28.8125rem;
-  padding-block: 5.0625rem;
+  flex: 0 0 461px;
+  padding-block: 81px;
 
   @include m.phone {
-    padding-block: 1.25rem;
+    padding-block: 20px;
     flex: 0 0 auto;
   }
 }
 
 .galleryTitle {
   &:not(:last-child) {
-    margin-bottom: 1.5rem;
+    margin-bottom: 24px;
   }
 }
 
@@ -56,7 +56,7 @@
   }
 
   &:not(:last-child) {
-    margin-bottom: 1.5rem;
+    margin-bottom: 24px;
   }
 }
 

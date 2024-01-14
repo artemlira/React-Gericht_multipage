@@ -3,8 +3,8 @@
 @use '../../../styles/functions.scss' as f;
 
 .testimony {
-  background: url('../../../images/line1.png')right -306.25rem no-repeat, #0C0B08;
-  padding-block: 9.5rem;
+  background: url('../../../images/line1.png')right -4900px no-repeat, #0C0B08;
+  padding-block: 152px;
   @include m.adaptiv-value('padding-inline', 190, -190, 1);
 }
 
@@ -14,16 +14,16 @@
 
 .bgIcon {
   position: absolute;
-  width: 9.125rem;
-  height: 9.125rem;
+  width: 146px;
+  height: 146px;
   background: url('../../../images/icon.png') center center/cover no-repeat;
   right: 0;
-  top: -12.5rem;
+  top: -200px;
   z-index: 10;
 
   @include m.phone {
-    width: 6.625rem;
-    height: 6.625rem;
+    width: 106px;
+    height: 106px;
   }
 }
 
@@ -31,14 +31,14 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
-  column-gap: 2rem;
-  row-gap: 4rem;
+  column-gap: 32px;
+  row-gap: 64px;
 
   @include m.laptop {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
-    column-gap: 2rem;
-    row-gap: 2rem;
+    column-gap: 32px;
+    row-gap: 32px;
   }
 }
 
@@ -49,25 +49,25 @@
     flex-direction: column-reverse;
 
     &:not(:last-child) {
-      margin-bottom:4rem;
+      margin-bottom:64px;
     }
   }
 }
 
 .itemPhoto {
-  flex: 0 1 13.25rem;
-  padding: 0rem 1rem 1.125rem 0rem;
+  flex: 0 1 212px;
+  padding: 0px 16px 18px 0px;
   position: relative;
 
   @media screen and (max-width:675px) {
-    width: 13.25rem;
+    width: 212px;
     margin-inline: auto;
     padding: 0;
   }
 
   &::after {
-    width: 2.9375rem;
-    height: 2.5rem;
+    width: 47px;
+    height: 40px;
     content: '';
     background: url('../../../images/Chefs/“.png')center/cover no-repeat;
     position: absolute;
@@ -75,8 +75,8 @@
     right: 0;
 
     @media screen and (max-width:675px) {
-      bottom: -1.25rem;
-      right: -1.75rem;
+      bottom: -20px;
+      right: -28px;
     }
   }
 
@@ -89,7 +89,7 @@
 
 .itemContant {
   flex: 0 1 77%;
-  padding: 1.125rem 0rem 1.125rem 1rem;
+  padding: 18px 0px 18px 16px;
 
   @media screen and (max-width:675px) {
     flex: 1 1 auto;
@@ -102,17 +102,17 @@
   line-height: f.ratio(16, 28);
 
   &:not(:last-child) {
-    margin-bottom: 1rem;
+    margin-bottom: 16px;
   }
 }
 
 .itemAuthor {
   font-weight: 400;
-  font-size: 2rem;
+  font-size: 32px;
   line-height: f.ratio(32, 41.6);
 
   &:not(:last-child) {
-    margin-bottom: 0.25rem;
+    margin-bottom: 4px;
   }
 
   @media screen and (max-width:675px) {

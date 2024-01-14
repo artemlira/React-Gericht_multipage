@@ -3,17 +3,17 @@
 @use '../../../styles/functions.scss' as f;
 
 .hero {
-  padding-block: 3rem 9.5rem;
+  padding-block: 48px 152px;
   background: url('../../../images/line1.png')right -8.5% no-repeat, #0C0B08;
 
   @include m.phone {
-    padding-block: 3rem;
+    padding-block: 48px;
     // text-align: center;
   }
 }
 
 .container {
-  min-height: 51.75rem;
+  min-height: 828px;
   display: flex;
 
   @include m.netbook {
@@ -27,39 +27,39 @@
 
 .contant {
   flex: 0 1 50%;
-  padding-block: 7.9375rem;
+  padding-block: 127px;
   @include m.adaptiv-value('padding-left', 180, -50, 1);
   @include m.adaptiv-value('padding-right', 190, -50, 1);
 
 
   @include m.laptop {
-    padding-block: 5rem;
+    padding-block: 80px;
     @include m.adaptiv-value('padding-left', 140, -50, 1);
     @include m.adaptiv-value('padding-right', 150, -50, 1);
   }
 }
 
 .logo {
-  margin-bottom: 0.5rem;
+  margin-bottom: 8px;
 }
 
 .logoText {
   font-family: v.$Cormorant;
   font-weight: 700;
   color: v.$white;
-  font-size: 1.4375rem;
+  font-size: 23px;
   line-height: f.ratio(23, 29.9);
   letter-spacing: 0.04em;
   text-transform: capitalize;
 
   &:not(:last-child) {
-    margin-bottom: 0.5rem;
+    margin-bottom: 8px;
   }
 }
 
 .logoImg {
-  width: 2.5rem;
-  height: 0.625rem;
+  width: 40px;
+  height: 10px;
 
   img {
     max-width: 100;
@@ -70,24 +70,24 @@
 .title {
   font-family: v.$Cormorant;
   font-weight: 700;
-  font-size: 5.625rem;
+  font-size: 90px;
   line-height: f.ratio(90, 113);
   color: v.$gold;
   letter-spacing: 0.04em;
   text-transform: capitalize;
 
   @include m.laptop {
-    font-size: 5rem;
+    font-size: 80px;
     line-height: f.ratio(80, 103);
   }
 
   @include m.phone {
-    font-size: 3.125rem;
+    font-size: 50px;
     line-height: f.ratio(50, 73);
   }
 
   &:not(:last-child) {
-    margin-bottom: 2rem;
+    margin-bottom: 32px;
   }
 }
 
@@ -97,7 +97,7 @@
   letter-spacing: 0.04em;
 
   &:not(:last-child) {
-    margin-bottom: 2rem;
+    margin-bottom: 32px;
   }
 }
 
@@ -115,10 +115,10 @@
   &::after {
     content: '';
     background: linear-gradient(270deg, #DCCA87 -19.44%, #DCCA87 44.12%, rgba(220, 202, 135, 0.24) 117.57%);
-    width: 3.8125rem;
-    height: 0.0625rem;
+    width: 61px;
+    height: 1px;
     position: absolute;
-    top: -3.125rem;
+    top: -50px;
     left: 0;
     transform: rotate(-90deg);
   }

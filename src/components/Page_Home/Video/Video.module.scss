@@ -3,7 +3,7 @@
 @use '../../../styles/functions.scss' as f;
 
 .video {
-  height: 47.6875rem;
+  height: 763px;
   background: url('../../../images/video/bg.jpg')center center/cover no-repeat, #0c0c0c6b;
   background-blend-mode: overlay;
   @include m.adaptiv-value('padding-inline', 190, -190, 1);
@@ -19,31 +19,31 @@
 
 .bgIcon {
   position: absolute;
-  width: 9.125rem;
-  height: 9.125rem;
+  width: 146px;
+  height: 146px;
   background: url('../../../images/icon.png') center center/cover no-repeat;
-  left: -2.9375rem;
-  top: 9.1875rem;
+  left: -47px;
+  top: 147px;
   z-index: 10;
 
   @include m.laptop {
-    left: 0rem;
-    top: 9.1875rem;
+    left: 0px;
+    top: 147px;
   }
 
   @include m.phone {
-    width: 6.625rem;
-    height: 6.625rem;
+    width: 106px;
+    height: 106px;
   }
 }
 
 .play {
-  width: 7.5rem;
-  height: 7.5rem;
+  width: 120px;
+  height: 120px;
 
   @include m.phone {
-    width: 5rem;
-    height: 5rem;
+    width: 80px;
+    height: 80px;
   }
 
   svg {

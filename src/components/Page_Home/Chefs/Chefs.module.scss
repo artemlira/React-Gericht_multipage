@@ -8,12 +8,12 @@
 
 .container {
   display: flex;
-  padding-block: 8rem;
+  padding-block: 128px;
   @include m.adaptiv-value('padding-inline', 175, 0, 1);
   overflow: hidden;
 
   @include m.laptop {
-    padding-inline: 0rem;
+    padding-inline: 0px;
   }
 
   @include m.netbook {
@@ -21,16 +21,16 @@
   }
 
   @include m.phone {
-    padding-block: 1.75rem;
+    padding-block: 28px;
   }
 
 }
 
 .image {
   flex: 0 1 50%;
-  max-height: 49.3125rem;
+  max-height: 789px;
   position: relative;
-  padding: 1.5rem;
+  padding: 24px;
   overflow: hidden;
 
   @include m.netbook {
@@ -85,7 +85,7 @@
   text-align: start;
 
   div {
-    margin-inline: 0rem;
+    margin-inline: 0px;
   }
 }
 
@@ -100,18 +100,18 @@
 .textTitle {
   display: flex;
   align-items: flex-end;
-  column-gap: 0.625rem;
+  column-gap: 10px;
 }
 
 .name {
   font-family: v.$Cormorant;
   font-weight: 400;
-  font-size: 2rem;
+  font-size: 32px;
   line-height: f.ratio(32, 41.6);
   color: v.$gold;
 
   &:not(:last-child) {
-    margin-bottom: 0.5rem;
+    margin-bottom: 8px;
   }
 }
 
@@ -120,8 +120,8 @@
 }
 
 .signature {
-  width: 15rem;
-  height: 5.1875rem;
+  width: 240px;
+  height: 83px;
 
   img {
     width: 100%;

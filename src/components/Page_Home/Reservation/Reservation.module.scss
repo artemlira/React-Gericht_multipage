@@ -3,24 +3,24 @@
 @use '../../../styles/functions.scss' as f;
 
 .reservation {
-  padding-block: 10.625rem 9.5rem;
+  padding-block: 170px 152px;
   @include m.adaptiv-value('padding-inline', 158, 50, 1);
-  background: url('../../../images/line2.png')left -37.1875rem no-repeat, url('../../../images/line1.png')right -66.1875rem no-repeat, #0C0B08;
+  background: url('../../../images/line2.png')left -595px no-repeat, url('../../../images/line1.png')right -1059px no-repeat, #0C0B08;
 
   @include m.tablet {
-    padding-inline: 3.125rem;
+    padding-inline: 50px;
   }
 
   @include m.phone {
-    padding-inline: 1.25rem;
+    padding-inline: 20px;
   }
 }
 
 .container {
   background: #0C0C0C;
-  border: 0.0625rem solid rgba(220, 202, 135, 0.2);
-  box-shadow: 1.375rem 1.875rem 5.9375rem 0.0625rem rgba(0, 0, 0, 0.7);
-  padding: 3rem 2rem;
+  border: 1px solid rgba(220, 202, 135, 0.2);
+  box-shadow: 22px 30px 95px 1px rgba(0, 0, 0, 0.7);
+  padding: 48px 32px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -29,25 +29,25 @@
 
 .bgIcon {
   position: absolute;
-  width: 9.125rem;
-  height: 9.125rem;
+  width: 146px;
+  height: 146px;
   background: url('../../../images/icon.png') center center/cover no-repeat;
-  right: -7.875rem;
-  top: -11rem;
+  right: -126px;
+  top: -176px;
 
   @media screen and (max-width:1080px) {
-    right: -5.375rem;
+    right: -86px;
   }
 
   @include m.tablet {
-    right: -2.8125rem;
+    right: -45px;
   }
 
   @include m.phone {
-    width: 6.625rem;
-    height: 6.625rem;
-    top: -7.875rem;
-    right: -1.5625rem;
+    width: 106px;
+    height: 106px;
+    top: -126px;
+    right: -25px;
   }
 }
 
@@ -55,23 +55,23 @@
   width: 100%;
 
   &:not(:last-child) {
-    margin-bottom: 4rem;
+    margin-bottom: 64px;
   }
 }
 
 .dialogForm {
   display: grid;
-  column-gap: 2rem;
+  column-gap: 32px;
   grid-template-columns: repeat(3, 1fr);
 
   &:not(:last-child) {
-    margin-bottom: 64px;
+    margin-bottom: 4rem;
   }
 
   @include m.netbook {
     grid-template-columns: 1fr;
     grid-template-rows: repeat(3, 1fr);
-    row-gap: 1.25rem;
+    row-gap: 20px;
   }
 }
 
@@ -79,15 +79,15 @@
 .date,
 .time {
   width: 100%;
-  height: 3.75rem;
-  border: 0.0625rem solid #F5EFDB;
+  height: 60px;
+  border: 1px solid #F5EFDB;
   background: url('../../../images/Reservation/Vector.png') 96% center no-repeat, transparent;
   letter-spacing: 0.04em;
   color: v.$grey;
   line-height: f.ratio(16, 28);
   font-family: v.$Cormorant;
   font-weight: 600;
-  padding-inline: 1rem;
+  padding-inline: 16px;
   position: relative;
   appearance: none;
   -webkit-appearance: none;

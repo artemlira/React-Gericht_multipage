@@ -3,76 +3,76 @@
 @use '../../../styles/functions.scss' as f;
 
 .blog {
-  background: url('../../../images/line1.png')right -485.25rem no-repeat, url('../../../images/line2.png')left -485.25rem no-repeat, #0C0B08;
+  background: url('../../../images/line1.png')right -7764px no-repeat, url('../../../images/line2.png')left -7764px no-repeat, #0C0B08;
 
 }
 
 .container {
-  margin-block: 9.5rem;
+  margin-block: 152px;
   @include m.adaptiv-value('margin-inline', 190, -190, 1);
   display: flex;
   flex-direction: column;
   align-items: center;
-  row-gap: 4rem;
+  row-gap: 64px;
   position: relative;
 
   @include m.netbook {
-    margin-inline: 0rem;
+    margin-inline: 0px;
   }
 }
 
 .bgIcon {
   position: absolute;
-  width: 9.125rem;
-  height: 9.125rem;
+  width: 146px;
+  height: 146px;
   background: url('../../../images/icon.png') center center/cover no-repeat;
-  bottom: -1.8125rem;
+  bottom: -29px;
   @include m.adaptiv-value('right', -190, 190, 1);
   z-index: 10;
 
   @media screen and (min-width:1920px) {
-    right: -14.75rem;
+    right: -236px;
   }
 
   @include m.laptop {
-    bottom: -1.8125rem;
+    bottom: -29px;
     right: 0px;
   }
 
   @include m.netbook {
-    bottom: -8.0625rem;
+    bottom: -129px;
   }
 
   @include m.phone {
-    width: 6.625rem;
-    height: 6.625rem;
-    bottom: -8.0625rem;
+    width: 106px;
+    height: 106px;
+    bottom: -129px;
   }
 }
 
 .cardsList {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  column-gap: 2rem;
+  column-gap: 32px;
 
   @include m.laptop {
     grid-template-columns: 1fr;
-    row-gap: 2rem;
+    row-gap: 32px;
   }
 
   @include m.netbook {
-    row-gap: 6rem;
+    row-gap: 96px;
   }
 }
 
 .cardItem {
   display: flex;
   flex-direction: column;
-  row-gap: 1.5rem;
+  row-gap: 24px;
 
   @include m.laptop {
     flex-direction: row;
-    column-gap: 1.5rem;
+    column-gap: 24px;
   }
 
   @include m.netbook {
@@ -82,8 +82,8 @@
 }
 
 .itemImg {
-  max-height: 26.875rem;
-  flex: 0 0 26.875rem;
+  max-height: 430px;
+  flex: 0 0 430px;
 
   @include m.netbook {
     width: 80vw;
@@ -101,7 +101,7 @@
 .itemContent {
   display: flex;
   flex-direction: column;
-  row-gap:2rem;
+  row-gap:32px;
 
   @include m.netbook {
     max-width: 80vw;
@@ -121,7 +121,7 @@
 
 .itemTitle {
   h5 {
-    font-size: 2rem;
+    font-size: 32px;
     line-height: f.ratio(32, 41.6);
     color: v.$gold;
     text-transform: capitalize;
@@ -129,7 +129,7 @@
 
     &:hover {
       text-decoration: underline;
-      text-underline-offset: 0.4375rem;
+      text-underline-offset: 7px;
     }
   }
 
@@ -156,7 +156,7 @@
     &::after {
       display: block;
       content: '';
-      height: 0.0625rem;
+      height: 1px;
       width: 0;
       background-color: v.$gold;
       position: absolute;

@@ -3,12 +3,12 @@
 @use '../../../styles/functions.scss' as f;
 
 .menu {
-  max-height: 58.25rem;
+  max-height: 932px;
   justify-content: flex-start;
   background: #0C0B08;
 
   @include m.phone {
-    max-height: 39.5rem;
+    max-height: 632px;
   }
 }
 
@@ -19,17 +19,17 @@
 
 .bgIcon {
   position: absolute;
-  width: 9.125rem;
-  height: 9.125rem;
+  width: 146px;
+  height: 146px;
   background: url('../../../images/icon.png') center center/cover no-repeat;
-  left: 1.625rem;
-  top: -1.625rem;
+  left: 26px;
+  top: -26px;
   z-index: 10;
 
 
   @include m.phone {
-    width: 6.625rem;
-    height: 6.625rem;
+    width: 106px;
+    height: 106px;
   }
 }
 
@@ -41,12 +41,12 @@
 
   .swiper-pagination {
     position: absolute;
-    left: 1.625rem;
+    left: 26px;
     top: 50%;
     transform: translateY(-50%);
     display: flex;
     flex-direction: column;
-    row-gap: 4rem;
+    row-gap: 64px;
     z-index: 10;
 
     @include m.phone {
@@ -58,28 +58,28 @@
     display: flex;
     font-family: v.$Cormorant;
     font-weight: 600;
-    font-size: 4rem;
+    font-size: 64px;
     line-height: f.ratio(64, 83.2);
     letter-spacing: 0.03em;
     color: v.$white;
 
     @include m.phone {
-      font-size: 2.5rem;
+      font-size: 40px;
       line-height: f.ratio(40, 60);
     }
   }
 
   .swiper-pagination-bullet-active {
     text-decoration: underline;
-    text-underline-offset: 0.625rem;
+    text-underline-offset: 10px;
   }
 }
 
 .wrapperImg {
-  height: 58.25rem;
+  height: 932px;
 
   @include m.phone {
-    height: 39.5rem;
+    height: 632px;
   }
 
   img {

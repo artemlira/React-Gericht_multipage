@@ -7,31 +7,31 @@
 }
 
 .container {
-  margin-block: 8rem;
+  margin-block: 128px;
   @include m.adaptiv-value('margin-inline', 190, -190, 1);
   display: flex;
   flex-direction: row-reverse;
-  column-gap: 6.9375rem;
+  column-gap: 111px;
   align-items: center;
   overflow: hidden;
 
   @include m.laptop {
     flex-direction: column-reverse;
     align-items: center;
-    margin-inline: 0rem;
+    margin-inline: 0px;
   }
 }
 
 .image {
-  height: 43.1875rem;
-  max-width: 34.6875rem;
-  flex: 0 0 34.6875rem;
-  padding-left: 4.5rem;
+  height: 691px;
+  max-width: 555px;
+  flex: 0 0 555px;
+  padding-left: 72px;
   position: relative;
 
   @include m.laptop {
-    max-height: 43.1875rem;
-    max-width: 34.6875rem;
+    max-height: 691px;
+    max-width: 555px;
     height: 80vw;
     width: 80vw;
     flex: 0 0 auto;
@@ -40,19 +40,19 @@
 
 .chefsWordSlider {
   height: 100%;
-  max-width: 30.1875rem;
+  max-width: 483px;
 }
 
 .contant {
   flex: 0 1 64%;
-  margin-block: 7.4375rem;
+  margin-block: 119px;
 }
 
 .ChefsWordTitle {
   text-align: start;
 
   div {
-    margin-inline: 0rem;
+    margin-inline: 0px;
   }
 }
 
@@ -60,34 +60,34 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
-  column-gap: 2rem;
-  row-gap: 4rem;
+  column-gap: 32px;
+  row-gap: 64px;
 
   @include m.netbook {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
-    column-gap: 2rem;
-    row-gap: 2rem;
+    column-gap: 32px;
+    row-gap: 32px;
   }
 }
 
 .awardItem {
   display: flex;
-  column-gap: 2rem;
+  column-gap: 32px;
   align-items: center;
 }
 
 .itemContent {
-  padding-right: 0.625rem;
+  padding-right: 10px;
 }
 
 .itemImg {
-  flex: 0 0 4.9375rem;
-  height: 4.9375rem;
+  flex: 0 0 79px;
+  height: 79px;
 
   @include m.phone {
-    flex: 0 0 3.6875rem;
-    height: 3.6875rem;
+    flex: 0 0 59px;
+    height: 59px;
   }
 
   img {
@@ -100,12 +100,12 @@
 .itemTitle {
   font-weight: 700;
   font-family: v.$Cormorant;
-  font-size: 1.4375rem;
+  font-size: 23px;
   line-height: f.ratio(23, 29.9);
   color: v.$gold;
 
   &:not(:last-child) {
-    margin-bottom: 0.5rem;
+    margin-bottom: 8px;
   }
 }
 
